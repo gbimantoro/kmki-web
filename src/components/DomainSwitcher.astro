@@ -5,19 +5,19 @@ interface Props {
 
 const { currentHighlight } = Astro.props;
 
-const isLocalOrPreview = Astro.url.hostname.includes('localhost') || Astro.url.hostname.includes('pages.dev');
-const mainUrl = isLocalOrPreview ? '/' : 'https://kmki.or.id/';
-const kajUrl = isLocalOrPreview ? '/kaj' : 'https://kaj.kmki.or.id/';
-const ccpgUrl = isLocalOrPreview ? '/ccpg2026' : 'https://ccpg2026.kmki.or.id/';
+const isDev = import.meta.env.DEV;
+const mainUrl = isDev ? '/' : 'https://kmki.or.id/';
+const kajUrl = isDev ? '/kaj' : 'https://kaj.kmki.or.id/';
+const ccpgUrl = isDev ? '/ccpg2026' : 'https://ccpg2026kaj.kmki.or.id/';
 ---
 
 <div class="bg-gradient-to-r from-slate-900 via-sky-950 to-slate-900 text-white text-xs border-b border-sky-800/40 py-1.5 px-3 relative z-50">
   <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-    <!-- Left: KMKI Network -->
+    <!-- Left: Jejaring KMKI -->
     <div class="flex items-center gap-2 text-slate-300">
       <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 font-bold border border-sky-400/30 text-xs">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        KMKI Network
+        Jejaring KMKI
       </span>
       <span class="hidden md:inline text-slate-400 text-[11px]">
         Komunitas Medik Katolik Indonesia • 20 Keuskupan
@@ -34,9 +34,9 @@ const ccpgUrl = isLocalOrPreview ? '/ccpg2026' : 'https://ccpg2026.kmki.or.id/';
             ? 'bg-sky-600 text-white shadow-xs'
             : 'text-slate-400 hover:text-white hover:bg-slate-700/50'
         }`}
-        title="Portal Resmi KMKI Indonesia"
+        title="Portal Resmi KMKI Nasional (kmki.or.id)"
       >
-        <span>kmki.or.id</span>
+        <span>KMKI Nasional</span>
       </a>
 
       <!-- KMKI KAJ Subdomain Switch -->
@@ -47,9 +47,9 @@ const ccpgUrl = isLocalOrPreview ? '/ccpg2026' : 'https://ccpg2026.kmki.or.id/';
             ? 'bg-sky-500 text-white shadow-xs'
             : 'text-sky-300 hover:text-white hover:bg-slate-700/50'
         }`}
-        title="Portal Resmi KMKI Wilayah Keuskupan Agung Jakarta (kaj.kmki.or.id)"
+        title="Portal Resmi KMKI Wilayah KAJ (kaj.kmki.or.id)"
       >
-        <span>kaj.kmki.or.id</span>
+        <span>KMKI KAJ</span>
       </a>
 
       <!-- Event Landing Page Switch with 🎓 icon -->
@@ -60,7 +60,7 @@ const ccpgUrl = isLocalOrPreview ? '/ccpg2026' : 'https://ccpg2026.kmki.or.id/';
             ? 'bg-amber-400 text-slate-950 shadow-xs'
             : 'text-amber-300 hover:text-amber-200 hover:bg-slate-700/50'
         }`}
-        title="Landing Page Simposium CCPG 2026"
+        title="Landing Page Simposium CCPG 2026 (ccpg2026kaj.kmki.or.id)"
       >
         <span class="text-sm">🎓</span>
         <span>CCPG 2026</span>
