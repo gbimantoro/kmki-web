@@ -30,10 +30,6 @@
             <span class="text-sky-600 font-bold">•</span>
             <span>Mengisi formulir pendaftaran anggota secara lengkap.</span>
           </li>
-          <li class="flex items-start gap-2">
-            <span class="text-sky-600 font-bold">•</span>
-            <span>Membayar iuran anggota <strong class="text-slate-900">Rp 50.000,- per 10 tahun</strong> untuk biaya administrasi pembuatan kartu tanda anggota (KTA).</span>
-          </li>
         </ul>
       </div>
     </div>
@@ -50,7 +46,7 @@
         <ol class="space-y-2.5 text-xs text-slate-600 leading-relaxed list-decimal list-inside">
           <li><strong>Mengisi form pendaftaran</strong> di bawah ini secara lengkap dan benar.</li>
           <li>Anda akan <strong>dihubungi melalui email</strong> oleh sekretariat untuk konfirmasi data.</li>
-          <li><strong>Mengumpulkan foto</strong> dan konfirmasi pembayaran iuran administrasi (Rp 50.000,-).</li>
+          <li><strong>Mengumpulkan pas foto</strong> untuk penerbitan Kartu Tanda Anggota (KTA) resmi.</li>
           <li><strong>Pengiriman kartu tanda anggota (KTA)</strong> resmi KMKI Wilayah KAJ.</li>
         </ol>
       </div>
@@ -514,9 +510,9 @@
         </div>
       </div>
 
-      <!-- Konfirmasi Iuran & Pernyataan -->
-      <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 leading-relaxed">
-        <strong>Pemberitahuan Iuran:</strong> Sesuai ketentuan, calon anggota membayar iuran anggota sebesar <strong>Rp 50.000,- per 10 tahun</strong> untuk biaya administrasi dan pencetakan KTA. Petunjuk transfer dan pengumpulan pas foto akan dikirimkan oleh Sekretariat KMKI KAJ melalui email setelah formulir ini diterima.
+      <!-- Informasi Pendaftaran -->
+      <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 text-xs text-sky-900 leading-relaxed">
+        <strong>Informasi:</strong> Formulir pendaftaran anggota ini akan diverifikasi oleh Sekretariat KMKI KAJ. Petunjuk administrasi dan konfirmasi data keanggotaan akan dikirimkan langsung ke alamat email Anda.
       </div>
 
       <!-- Tombol Submit -->
@@ -545,7 +541,7 @@
           Pendaftaran Terkirim!
         </h3>
         <p class="text-xs sm:text-sm text-slate-600 mb-6 leading-relaxed">
-          Terima kasih telah mendaftar menjadi anggota KMKI Wilayah Keuskupan Agung Jakarta. Data pendaftaran Anda telah disiapkan untuk dikirim ke email resmi sekretariat: <strong class="text-slate-900">kaj@kmki.or.id</strong>.
+          Terima kasih telah mendaftar menjadi anggota KMKI Wilayah Keuskupan Agung Jakarta. Data pendaftaran Anda telah disiapkan untuk dikirim ke email resmi sekretariat: <strong class="text-slate-900">kmki.kaj@gmail.com</strong>.
         </p>
 
         <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-left text-xs space-y-2 mb-6 text-slate-700">
@@ -556,7 +552,7 @@
           </div>
           <div class="flex items-start gap-2">
             <span class="text-sky-600 font-bold">2.</span>
-            <span>Kirimkan pas foto berlatar belakang polos dan bukti transfer iuran Rp 50.000 / 10 tahun.</span>
+            <span>Kirimkan pas foto berlatar belakang polos via email untuk pencetakan KTA resmi.</span>
           </div>
           <div class="flex items-start gap-2">
             <span class="text-sky-600 font-bold">3.</span>
@@ -760,14 +756,14 @@
       body += `Paroki               : ${fd.get('paroki')}\n`;
       if (fd.get('paroki_luar'))   body += `Paroki Luar KAJ      : ${fd.get('paroki_luar')}\n`;
       body += `\n==============================================\n`;
-      body += `Catatan: Pemohon memahami kewajiban iuran anggota Rp 50.000 / 10 tahun untuk pembuatan KTA.\n`;
+      body += `Formulir dikirim melalui portal resmi KMKI Wilayah KAJ.\n`;
 
       if (modal) {
         modal.classList.remove('hidden');
       }
 
       // Open mailto
-      const mailtoUrl = `mailto:kaj@kmki.or.id?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoUrl = `mailto:kmki.kaj@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       setTimeout(() => {
         window.location.href = mailtoUrl;
       }, 600);

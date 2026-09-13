@@ -1,7 +1,6 @@
 ---
 import KAJLayout from '../../layouts/KAJLayout.astro';
 import Medical3DVector from '../../components/Medical3DVector.astro';
-import KAJMembershipForm from '../../components/KAJMembershipForm.astro';
 ---
 
 <KAJLayout 
@@ -54,16 +53,15 @@ import KAJMembershipForm from '../../components/KAJMembershipForm.astro';
         <!-- CTA Action Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a 
-            href="#keanggotaan" 
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-sky-600 via-sky-700 to-blue-800 hover:from-sky-500 hover:to-blue-700 shadow-xl shadow-sky-600/25 hover:shadow-sky-600/35 transition transform hover:-translate-y-0.5"
+            href="https://wa.me/6287888736715" 
+            target="_blank"
+            rel="noopener"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-xl shadow-emerald-600/25 hover:shadow-emerald-600/35 transition transform hover:-translate-y-0.5"
           >
-            <svg class="w-5 h-5 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="8.5" cy="7" r="4"/>
-              <line x1="20" y1="8" x2="20" y2="14"/>
-              <line x1="23" y1="11" x2="17" y2="11"/>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.316 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.818-.981z"/>
             </svg>
-            <span>Daftar Anggota KMKI KAJ</span>
+            <span>WhatsApp KMKI KAJ</span>
           </a>
 
           <a 
@@ -411,10 +409,12 @@ import KAJMembershipForm from '../../components/KAJMembershipForm.astro';
           </div>
           <div class="pt-4">
             <a 
-              href="#keanggotaan" 
+              href="https://wa.me/6287888736715" 
+              target="_blank"
+              rel="noopener"
               class="inline-block w-full text-center py-2.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow transition"
             >
-              Gabung Menjadi Anggota KAJ &rarr;
+              Hubungi Sekretariat KAJ &rarr;
             </a>
           </div>
         </div>
@@ -618,7 +618,7 @@ import KAJMembershipForm from '../../components/KAJMembershipForm.astro';
           </div>
           <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
             <span class="text-slate-500">Pelayanan Lintas Paroki</span>
-            <a href="mailto:kaj@kmki.or.id?subject=Permohonan%20Seminar%20Kesehatan%20Awam%20Paroki" class="text-emerald-700 font-bold hover:underline">Undang Pembicara &rarr;</a>
+            <a href="mailto:kmki.kaj@gmail.com?subject=Permohonan%20Seminar%20Kesehatan%20Awam%20Paroki" class="text-emerald-700 font-bold hover:underline">Undang Pembicara &rarr;</a>
           </div>
         </div>
 
@@ -639,78 +639,56 @@ import KAJMembershipForm from '../../components/KAJMembershipForm.astro';
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-            <span class="text-slate-500">Pesta St. Lukas: Tiap Oktober</span>
+            <span class="text-slate-500">Jadwal & Komunitas</span>
             <a href="https://t.me/+C8fyLv51b7mhWQWm" target="_blank" rel="noopener" class="text-purple-700 font-bold hover:underline">Jadwal Rohani &rarr;</a>
           </div>
         </div>
 
-        <!-- Program 5: Kongres Nasional & Internasional -->
+        <!-- Program 5: Konsultasi Bioetika & Moral Katolik -->
         <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs hover:shadow-xl transition flex flex-col justify-between group">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center mb-5 group-hover:scale-110 transition transform">
-              <Medical3DVector name="award-skp" size={38} />
-            </div>
-            <span class="text-xs font-bold text-indigo-800 bg-indigo-100/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-              Konas & FIAMC
-            </span>
-            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3 font-heading">
-              Konas KMKI & Konferensi FIAMC
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Berpartisipasi aktif dalam Kongres Nasional (Konas) KMKI di berbagai keuskupan Indonesia serta pertemuan asosiasi dokter Katolik sedunia (FIAMC & AFCMA).
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-            <span class="text-slate-500">Jejaring Global</span>
-            <a href="https://kmki.or.id/" class="text-indigo-700 font-bold hover:underline">Portal Nasional &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Program 6: Bakti Sosial & Posko Medis KAJ -->
-        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs hover:shadow-xl transition flex flex-col justify-between group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center mb-5 group-hover:scale-110 transition transform">
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center mb-5 group-hover:scale-110 transition transform">
               <Medical3DVector name="shield-check" size={38} />
             </div>
-            <span class="text-xs font-bold text-teal-800 bg-teal-100/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-              Aksi Nyata
+            <span class="text-xs font-bold text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+              Bioetika Kedokteran
             </span>
             <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3 font-heading">
-              Bakti Medis & Posko Perayaan KAJ
+              Forum Bioetika & Moral Medis
             </h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              Mengerahkan tim medis relawan dokter untuk posko kesehatan perayaan hari besar gerejawi, pentahbisan imam, kunjungan Bapa Suci, serta tanggap bencana darurat.
+              Kajian etika dan pendampingan moral bagi tenaga medis dalam menghadapi dilema klinis: akhir hidup, teknologi reproduksi, abortus iminens, dan martabat ciptaan.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-            <span class="text-slate-500">Relawan Nakes Katolik</span>
-            <a href="#infoboard" class="text-teal-700 font-bold hover:underline">Info Relawan &rarr;</a>
+            <span class="text-slate-500">Pusat Kajian Bioetika</span>
+            <a href="#kontak" class="text-amber-700 font-bold hover:underline">Konsultasi Etika &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program 6: Bantuan Medis Kemanusiaan & Bencana -->
+        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs hover:shadow-xl transition flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-800 flex items-center justify-center mb-5 group-hover:scale-110 transition transform">
+              <Medical3DVector name="capsules" size={38} />
+            </div>
+            <span class="text-xs font-bold text-sky-800 bg-sky-100/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+              Tanggap Darurat
+            </span>
+            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3 font-heading">
+              Aksi Medis Bencana (Emergency Response)
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Mobilisasi dokter relawan cepat tanggap untuk membantu korban bencana alam, banjir Jakarta, kebakaran, maupun krisis kemanusiaan di wilayah KAJ dan sekitarnya.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
+            <span class="text-slate-500">Tim Tanggap Bencana</span>
+            <a href="#infoboard" class="text-sky-700 font-bold hover:underline">Info Relawan &rarr;</a>
           </div>
         </div>
 
       </div>
-
-    </div>
-  </section>
-
-  <!-- SECTION: KEANGGOTAAN KMKI KAJ -->
-  <section id="keanggotaan" class="py-20 bg-slate-50 border-b border-slate-200/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider border border-sky-200">
-          Pendaftaran & Komunitas
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-3 font-heading">
-          Keanggotaan KMKI Wilayah KAJ
-        </h2>
-        <p class="text-slate-600 text-base mt-3">
-          Mari bergabung bersama keluarga besar tenaga medis Katolik di Keuskupan Agung Jakarta. Tumbuh bersama dalam iman, bioetika, dan pelayanan kesehatan bangsa.
-        </p>
-      </div>
-
-      <!-- Formulir & Detail Pendaftaran Resmi -->
-      <KAJMembershipForm />
 
     </div>
   </section>
@@ -756,7 +734,7 @@ import KAJMembershipForm from '../../components/KAJMembershipForm.astro';
           </div>
           <div class="mt-6 pt-4 border-t border-slate-200">
             <a 
-              href="mailto:kaj@kmki.or.id?subject=Informasi%20Kebutuhan%20Tenaga%20Kesehatan%20KMKI%20KAJ" 
+              href="mailto:kmki.kaj@gmail.com?subject=Informasi%20Kebutuhan%20Tenaga%20Kesehatan%20KMKI%20KAJ" 
               class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:text-sky-800"
             >
               <span>Hubungi Sekretariat untuk Info Loker</span>
@@ -788,7 +766,7 @@ import KAJMembershipForm from '../../components/KAJMembershipForm.astro';
           </div>
           <div class="mt-6 pt-4 border-t border-slate-200">
             <a 
-              href="mailto:kaj@kmki.or.id?subject=Pendaftaran%20Relawan%20Tim%20Medis%20KAJ" 
+              href="mailto:kmki.kaj@gmail.com?subject=Pendaftaran%20Relawan%20Tim%20Medis%20KAJ" 
               class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800"
             >
               <span>Daftar Relawan Medis KAJ via Email</span>
@@ -995,7 +973,7 @@ import KAJMembershipForm from '../../components/KAJMembershipForm.astro';
           Hubungi Sekretariat KMKI Wilayah KAJ
         </h2>
         <p class="text-slate-600 text-base mt-3">
-          Pertanyaan seputar keanggotaan, permohonan seminar kesehatan paroki, kolaborasi kegiatan ilmiah, atau informasi CCPG 2026.
+          Pertanyaan seputar kegiatan rohani, permohonan seminar kesehatan paroki, kolaborasi kegiatan ilmiah, atau informasi CCPG 2026.
         </p>
       </div>
 
@@ -1037,12 +1015,22 @@ import KAJMembershipForm from '../../components/KAJMembershipForm.astro';
               </div>
 
               <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.316 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.818-.981z"/>
+                </svg>
+                <div>
+                  <strong class="text-slate-900 block">WhatsApp Resmi:</strong>
+                  <a href="https://wa.me/6287888736715" target="_blank" rel="noopener" class="text-emerald-600 font-bold hover:underline">+62 878-8873-6715</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-sky-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
                 <div>
                   <strong class="text-slate-900 block">Email Resmi:</strong>
-                  <a href="mailto:kaj@kmki.or.id" class="text-sky-600 hover:underline">kaj@kmki.or.id</a>
+                  <a href="mailto:kmki.kaj@gmail.com" class="text-sky-600 hover:underline">kmki.kaj@gmail.com</a>
                 </div>
               </div>
 
@@ -1073,20 +1061,22 @@ import KAJMembershipForm from '../../components/KAJMembershipForm.astro';
               Butuh Informasi Cepat Seputar KMKI KAJ?
             </h3>
             <p class="text-sm text-sky-100 mt-2 leading-relaxed">
-              Tim sekretariat KMKI Wilayah KAJ siap membantu Anda terkait pendaftaran anggota, saluran Telegram info kegiatan, maupun informasi Simposium Ilmiah CCPG 2026.
+              Tim sekretariat KMKI Wilayah KAJ siap membantu Anda terkait informasi kegiatan rohani, permohonan seminar kesehatan paroki, maupun informasi Simposium Ilmiah CCPG 2026.
             </p>
 
             <div class="mt-6 space-y-3">
               <a 
-                href="/keanggotaan/pendaftaran-anggota-2" 
-                class="flex items-center justify-between p-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 transition text-sm font-semibold"
+                href="https://wa.me/6287888736715" 
+                target="_blank" 
+                rel="noopener" 
+                class="flex items-center justify-between p-3.5 rounded-xl bg-emerald-500/25 hover:bg-emerald-500/35 border border-emerald-400/30 transition text-sm font-semibold"
               >
-                <span>Formulir Pendaftaran Anggota KAJ</span>
+                <span>Chat WhatsApp Sekretariat KAJ</span>
                 <span>&rarr;</span>
               </a>
 
               <a 
-                href="mailto:kaj@kmki.or.id?subject=Permohonan%20Seminar%20Kesehatan%20Paroki" 
+                href="mailto:kmki.kaj@gmail.com?subject=Permohonan%20Seminar%20Kesehatan%20Paroki" 
                 class="flex items-center justify-between p-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 transition text-sm font-semibold"
               >
                 <span>Permohonan Seminar Kesehatan Paroki</span>
