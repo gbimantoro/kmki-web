@@ -1,0 +1,783 @@
+---
+// KAJ Membership Registration Form Component
+// Faithful to the specifications & fields from https://kmkikaj.my.id/keanggotaan/pendaftaran-anggota-2/
+---
+
+<div class="max-w-4xl mx-auto">
+  
+  <!-- Info Cards Header: Syarat, Langkah, Keuntungan -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    
+    <!-- Syarat Pendaftaran -->
+    <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+      <div>
+        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-lg mb-4">
+          📋
+        </div>
+        <h3 class="text-base font-bold text-slate-900 mb-3 font-heading">
+          Syarat Pendaftaran Anggota
+        </h3>
+        <ul class="space-y-2 text-xs text-slate-600 leading-relaxed">
+          <li class="flex items-start gap-2">
+            <span class="text-sky-600 font-bold">•</span>
+            <span>Merupakan Sarjana Kedokteran/Kedokteran Gigi, Dokter Umum/Dokter Gigi, atau Dokter Spesialis/Dokter Gigi Spesialis.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-sky-600 font-bold">•</span>
+            <span>Beragama Katolik.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-sky-600 font-bold">•</span>
+            <span>Mengisi formulir pendaftaran anggota secara lengkap.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-sky-600 font-bold">•</span>
+            <span>Membayar iuran anggota <strong class="text-slate-900">Rp 50.000,- per 10 tahun</strong> untuk biaya administrasi pembuatan kartu tanda anggota (KTA).</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Langkah Pendaftaran -->
+    <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+      <div>
+        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-lg mb-4">
+          👣
+        </div>
+        <h3 class="text-base font-bold text-slate-900 mb-3 font-heading">
+          Langkah Pendaftaran Anggota
+        </h3>
+        <ol class="space-y-2.5 text-xs text-slate-600 leading-relaxed list-decimal list-inside">
+          <li><strong>Mengisi form pendaftaran</strong> di bawah ini secara lengkap dan benar.</li>
+          <li>Anda akan <strong>dihubungi melalui email</strong> oleh sekretariat untuk konfirmasi data.</li>
+          <li><strong>Mengumpulkan foto</strong> dan konfirmasi pembayaran iuran administrasi (Rp 50.000,-).</li>
+          <li><strong>Pengiriman kartu tanda anggota (KTA)</strong> resmi KMKI Wilayah KAJ.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Keuntungan Menjadi Anggota -->
+    <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+      <div>
+        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-lg mb-4">
+          🌟
+        </div>
+        <h3 class="text-base font-bold text-slate-900 mb-3 font-heading">
+          Keuntungan Menjadi Anggota
+        </h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Menambah relasi profesional dan persaudaraan seiman, menambah informasi klinis dan regulasi kesehatan terkini, dapat bertukar informasi ilmiah dengan rekan sejawat lain, serta dapat mengikuti kegiatan rohani bersama-sama (Misa St. Lukas, Rekoleksi, dan Ziarah Rekreasi).
+        </p>
+      </div>
+      <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400">
+        Paguyuban nakes Katolik di Keuskupan Agung Jakarta
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Form Pendaftaran -->
+  <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl relative overflow-hidden">
+    
+    <div class="mb-8 pb-6 border-b border-slate-200">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-2">
+        Formulir Resmi KMKI KAJ
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-black text-slate-900 font-heading">
+        Formulir Pendaftaran Anggota Baru
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-500 mt-1">
+        Silakan isi data diri Anda dengan teliti. Tanda bintang (<span class="text-rose-500 font-bold">*</span>) wajib diisi.
+      </p>
+    </div>
+
+    <form id="kaj-membership-form" class="space-y-8">
+
+      <!-- BAGIAN 1: IDENTITAS & KONTAK -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-sky-800 border-b border-sky-100 pb-2 mb-4 font-heading flex items-center gap-2">
+          <span class="w-6 h-6 rounded-full bg-sky-600 text-white text-xs flex items-center justify-center font-mono">1</span>
+          Identitas & Informasi Kontak
+        </h3>
+
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">
+              Nama berikut gelar <span class="text-rose-500">*</span>
+            </label>
+            <input 
+              type="text" 
+              name="nama_gelar" 
+              required 
+              placeholder="Contoh: dr. Albertus Pratama, Sp.A / drg. Maria Fransiska" 
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                No. Telepon / HP 1 <span class="text-rose-500">*</span>
+              </label>
+              <input 
+                type="tel" 
+                name="telepon_1" 
+                required 
+                placeholder="0812-xxxx-xxxx" 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Email 1 <span class="text-rose-500">*</span>
+              </label>
+              <input 
+                type="email" 
+                name="email_1" 
+                required 
+                placeholder="dokter@gmail.com" 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                No. Telepon / HP 2 <span class="text-slate-400 font-normal">(Opsional)</span>
+              </label>
+              <input 
+                type="tel" 
+                name="telepon_2" 
+                placeholder="Nomor alternatif" 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Email 2 <span class="text-slate-400 font-normal">(Opsional)</span>
+              </label>
+              <input 
+                type="email" 
+                name="email_2" 
+                placeholder="Email institusi / alternatif" 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BAGIAN 2: PROFESI & PENDIDIKAN -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-sky-800 border-b border-sky-100 pb-2 mb-4 font-heading flex items-center gap-2">
+          <span class="w-6 h-6 rounded-full bg-sky-600 text-white text-xs flex items-center justify-center font-mono">2</span>
+          Profesi & Pendidikan
+        </h3>
+
+        <div class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Gelar / Kategori Profesi <span class="text-rose-500">*</span>
+              </label>
+              <select 
+                name="gelar" 
+                id="select-gelar"
+                required 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              >
+                <option value="" disabled selected>Pilih Kategori Profesi...</option>
+                <option value="Sarjana Kedokteran">Sarjana Kedokteran</option>
+                <option value="Sarjana Kedokteran Gigi">Sarjana Kedokteran Gigi</option>
+                <option value="Dokter Umum">Dokter Umum</option>
+                <option value="Dokter Gigi">Dokter Gigi</option>
+                <option value="Perawat / Tenaga Kesehatan lainnya">Perawat / Tenaga Kesehatan lainnya</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Tenaga kesehatan lainnya <span class="text-slate-400 font-normal">(Jika memilih nakes lainnya)</span>
+              </label>
+              <input 
+                type="text" 
+                name="nakes_lainnya" 
+                placeholder="Contoh: Apoteker, Fisioterapis, Perawat" 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="sm:col-span-2">
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Asal Universitas <span class="text-rose-500">*</span>
+              </label>
+              <input 
+                type="text" 
+                name="universitas" 
+                required 
+                placeholder="Contoh: FKIK Unika Atma Jaya Jakarta / FK UI" 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Tahun Masuk
+              </label>
+              <input 
+                type="number" 
+                name="tahun_masuk" 
+                placeholder="Contoh: 2012" 
+                min="1950" 
+                max="2030"
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">
+              Tempat Bekerja / Institusi Pelayanan Medis <span class="text-rose-500">*</span>
+            </label>
+            <input 
+              type="text" 
+              name="tempat_bekerja" 
+              required 
+              placeholder="Contoh: RS St. Carolus Salemba / Puskesmas / Klinik / Praktik Mandiri" 
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- BAGIAN 3: DATA KELAHIRAN -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-sky-800 border-b border-sky-100 pb-2 mb-4 font-heading flex items-center gap-2">
+          <span class="w-6 h-6 rounded-full bg-sky-600 text-white text-xs flex items-center justify-center font-mono">3</span>
+          Tanggal Lahir
+        </h3>
+
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">
+              Tanggal Lahir <span class="text-rose-500">*</span>
+            </label>
+            <input 
+              type="number" 
+              name="tanggal_lahir" 
+              required 
+              min="1" 
+              max="31" 
+              placeholder="1 - 31" 
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">
+              Bulan Lahir <span class="text-rose-500">*</span>
+            </label>
+            <select 
+              name="bulan_lahir" 
+              required 
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+            >
+              <option value="" disabled selected>Pilih Bulan...</option>
+              <option value="Januari">Januari</option>
+              <option value="Februari">Februari</option>
+              <option value="Maret">Maret</option>
+              <option value="April">April</option>
+              <option value="Mei">Mei</option>
+              <option value="Juni">Juni</option>
+              <option value="Juli">Juli</option>
+              <option value="Agustus">Agustus</option>
+              <option value="September">September</option>
+              <option value="Oktober">Oktober</option>
+              <option value="November">November</option>
+              <option value="Desember">Desember</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">
+              Tahun Lahir <span class="text-rose-500">*</span>
+            </label>
+            <input 
+              type="number" 
+              name="tahun_lahir" 
+              required 
+              min="1920" 
+              max="2015" 
+              placeholder="Contoh: 1988" 
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- BAGIAN 4: DOMISILI & WILAYAH GEREJAWI -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-sky-800 border-b border-sky-100 pb-2 mb-4 font-heading flex items-center gap-2">
+          <span class="w-6 h-6 rounded-full bg-sky-600 text-white text-xs flex items-center justify-center font-mono">4</span>
+          Domisili & Wilayah Gerejawi (KAJ)
+        </h3>
+
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">
+              Alamat Tempat Tinggal / Domisili <span class="text-rose-500">*</span>
+            </label>
+            <textarea 
+              name="alamat_domisili" 
+              rows="3" 
+              required 
+              placeholder="Alamat lengkap (nama jalan, nomor, RT/RW, kelurahan, kecamatan)" 
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+            ></textarea>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Kabupaten Tempat Tinggal / Domisili <span class="text-rose-500">*</span>
+              </label>
+              <input 
+                type="text" 
+                name="kabupaten" 
+                required 
+                placeholder="Contoh: Jakarta Utara / Tangerang / Bekasi" 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Kota Tempat Tinggal / Domisili <span class="text-rose-500">*</span>
+              </label>
+              <input 
+                type="text" 
+                name="kota" 
+                required 
+                placeholder="Contoh: Jakarta / Tangerang Selatan / Bekasi" 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Dekenat <span class="text-rose-500">*</span>
+              </label>
+              <select 
+                name="dekenat" 
+                id="select-dekenat"
+                required 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              >
+                <option value="" disabled selected>Pilih Dekenat KAJ...</option>
+                <option value="Jakarta Utara">Jakarta Utara</option>
+                <option value="Jakarta Timur">Jakarta Timur</option>
+                <option value="Jakarta Barat">Jakarta Barat</option>
+                <option value="Jakarta Pusat">Jakarta Pusat</option>
+                <option value="Jakarta Selatan">Jakarta Selatan</option>
+                <option value="Bekasi">Bekasi</option>
+                <option value="Tangerang">Tangerang</option>
+                <option value="Luar KAJ">Luar KAJ</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Dekenat (Luar KAJ) <span class="text-slate-400 font-normal">(Jika memilih Luar KAJ)</span>
+              </label>
+              <input 
+                type="text" 
+                name="dekenat_luar" 
+                placeholder="Tuliskan nama dekenat/keuskupan luar KAJ" 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">
+              Paroki <span class="text-rose-500">*</span>
+            </label>
+            <select 
+              name="paroki" 
+              id="select-paroki"
+              required 
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+            >
+              <option value="" disabled selected>Pilih Paroki Anda...</option>
+              <!-- Jakarta Utara -->
+              <optgroup label="Dekenat Jakarta Utara">
+                <option value="Jakarta Utara, St. Yakobus, KELAPA GADING">Jakarta Utara, St. Yakobus, KELAPA GADING</option>
+                <option value="Jakarta Utara, ST LUKAS, SUNTER">Jakarta Utara, ST LUKAS, SUNTER</option>
+                <option value="Jakarta Utara, St. Yohanes don Bosko, DANAU SUNTER">Jakarta Utara, St. Yohanes don Bosko, DANAU SUNTER</option>
+                <option value="Jakarta Utara, REGINA CAELI , Pantai Indah Kapuk">Jakarta Utara, REGINA CAELI , Pantai Indah Kapuk</option>
+                <option value="Jakarta Utara, Salib Suci, CILINCING">Jakarta Utara, Salib Suci, CILINCING</option>
+                <option value="Jakarta Utara, St. Alfonsus Rodriguez, PADEMANGAN">Jakarta Utara, St. Alfonsus Rodriguez, PADEMANGAN</option>
+                <option value="Jakarta Utara, St. Fransiskus Xaverius, TANJUNG PRIOK">Jakarta Utara, St. Fransiskus Xaverius, TANJUNG PRIOK</option>
+                <option value="Jakarta Utara, Stella Maris, PLUIT">Jakarta Utara, Stella Maris, PLUIT</option>
+              </optgroup>
+              <!-- Jakarta Timur -->
+              <optgroup label="Dekenat Jakarta Timur">
+                <option value="Jakarta Timur, St. Antonius Padua, BIDARACINA">Jakarta Timur, St. Antonius Padua, BIDARACINA</option>
+                <option value="Jakarta Timur, St. Aloysius Gonzaga CIJANTUNG">Jakarta Timur, St. Aloysius Gonzaga CIJANTUNG</option>
+                <option value="Jakarta Timur, St. Robertus Bellarminus, CILILITAN">Jakarta Timur, St. Robertus Bellarminus, CILILITAN</option>
+                <option value="Jakarta Timur, St. Anna, DUREN SAWIT">Jakarta Timur, St. Anna, DUREN SAWIT</option>
+                <option value="Jakarta Timur, St. Yosep, MATRAMAN">Jakarta Timur, St. Yosep, MATRAMAN</option>
+                <option value="Jakarta Timur, St. Bonaventura, PULOMAS">Jakarta Timur, St. Bonaventura, PULOMAS</option>
+                <option value="Jakarta Timur, St. Gabriel , PULO GEBANG">Jakarta Timur, St. Gabriel , PULO GEBANG</option>
+                <option value="Jakarta Timur, Keluarga Kudus, RAWAMANGUN">Jakarta Timur, Keluarga Kudus, RAWAMANGUN</option>
+                <option value="Jakarta Timur, St. Yohanes Maria Vianney , CILANGKAP">Jakarta Timur, St. Yohanes Maria Vianney , CILANGKAP</option>
+              </optgroup>
+              <!-- Jakarta Barat -->
+              <optgroup label="Dekenat Jakarta Barat">
+                <option value="Jakarta Barat, Maria Bunda Perantara , CIDENG">Jakarta Barat, Maria Bunda Perantara , CIDENG</option>
+                <option value="Jakarta Barat, Damai Kristus, KAMPUNG DURI">Jakarta Barat, Damai Kristus, KAMPUNG DURI</option>
+                <option value="Jakarta Barat, Bunda Hati Kudus , KEMAKMURAN">Jakarta Barat, Bunda Hati Kudus , KEMAKMURAN</option>
+                <option value="Jakarta Barat, St. Petrus & Paulus , MANGGA BESAR">Jakarta Barat, St. Petrus & Paulus , MANGGA BESAR</option>
+                <option value="Jakarta Barat, Kristus Salvator , SLIPI">Jakarta Barat, Kristus Salvator , SLIPI</option>
+                <option value="Jakarta Barat, St. Maria De Fatima, TOASEBIO">Jakarta Barat, St. Maria De Fatima, TOASEBIO</option>
+                <option value="Jakarta Barat, St. Thomas Rasul, BOJONG INDAH">Jakarta Barat, St. Thomas Rasul, BOJONG INDAH</option>
+                <option value="Jakarta Barat, Trinitas, CENGKARENG">Jakarta Barat, Trinitas, CENGKARENG</option>
+                <option value="Jakarta Barat, St. Kristoforus, GROGOL">Jakarta Barat, St. Kristoforus, GROGOL</option>
+                <option value="Jakarta Barat, St. Andreas, KEDOYA">Jakarta Barat, St. Andreas, KEDOYA</option>
+                <option value="Jakarta Barat, St. Matias Rasul , KOSAMBI BARU">Jakarta Barat, St. Matias Rasul , KOSAMBI BARU</option>
+                <option value="Jakarta Barat, Maria Kusuma Karmel, MERUYA">Jakarta Barat, Maria Kusuma Karmel, MERUYA</option>
+                <option value="Jakarta Barat, St. Philipus Rasul , KAPUK">Jakarta Barat, St. Philipus Rasul , KAPUK</option>
+                <option value="Jakarta Barat, Maria Bunda Karmel, TOMANG">Jakarta Barat, Maria Bunda Karmel, TOMANG</option>
+                <option value="Jakarta Barat, St. Maria Imakulata, KALIDERES">Jakarta Barat, St. Maria Imakulata, KALIDERES</option>
+              </optgroup>
+              <!-- Jakarta Pusat -->
+              <optgroup label="Dekenat Jakarta Pusat">
+                <option value="Jakarta Pusat, St. Ignatius, JL. MALANG">Jakarta Pusat, St. Ignatius, JL. MALANG</option>
+                <option value="Jakarta Pusat, SP. Maria diangkat ke Surga, KATEDRAL">Jakarta Pusat, SP. Maria diangkat ke Surga, KATEDRAL</option>
+                <option value="Jakarta Pusat, Kristus Raja, PEJOMPONGAN">Jakarta Pusat, Kristus Raja, PEJOMPONGAN</option>
+                <option value="Jakarta Pusat, ST. THERESIA">Jakarta Pusat, ST. THERESIA</option>
+                <option value="Jakarta Pusat, St. Paskalis, CEMPAKA PUTIH">Jakarta Pusat, St. Paskalis, CEMPAKA PUTIH</option>
+                <option value="Jakarta Pusat, Hati Kudus, KRAMAT">Jakarta Pusat, Hati Kudus, KRAMAT</option>
+              </optgroup>
+              <!-- Jakarta Selatan -->
+              <optgroup label="Dekenat Jakarta Selatan">
+                <option value="Jakarta Selatan, St. Stefanus, CILANDAK">Jakarta Selatan, St. Stefanus, CILANDAK</option>
+                <option value="Jakarta Selatan, Ratu Rosari, JAGAKARSA">Jakarta Selatan, Ratu Rosari, JAGAKARSA</option>
+                <option value="Jakarta Selatan, St. Yohanes Penginjil, BLOK B">Jakarta Selatan, St. Yohanes Penginjil, BLOK B</option>
+                <option value="Jakarta Selatan, SP. MARIA RATU, BLOK Q">Jakarta Selatan, SP. MARIA RATU, BLOK Q</option>
+                <option value="Jakarta Selatan, Keluarga Kudus, PASAR MINGGU">Jakarta Selatan, Keluarga Kudus, PASAR MINGGU</option>
+                <option value="Jakarta Selatan, St. Fransiskus Asisi, TEBET">Jakarta Selatan, St. Fransiskus Asisi, TEBET</option>
+              </optgroup>
+              <!-- Bekasi -->
+              <optgroup label="Dekenat Bekasi">
+                <option value="Bekasi, St. Arnoldus, BEKASI">Bekasi, St. Arnoldus, BEKASI</option>
+                <option value="Bekasi, ST. LEO AGUNG , JATIWARINGIN">Bekasi, ST. LEO AGUNG , JATIWARINGIN</option>
+                <option value="Bekasi, ST. SERVATIUS, KAMPUNG SAWAH">Bekasi, ST. SERVATIUS, KAMPUNG SAWAH</option>
+                <option value="Bekasi, Kalvari, LUBANG BUAYA">Bekasi, Kalvari, LUBANG BUAYA</option>
+                <option value="Bekasi, ST. MIKAEL, KRANJI">Bekasi, ST. MIKAEL, KRANJI</option>
+                <option value="Bekasi, St. Bartolomeus, TAMAN GALAXI">Bekasi, St. Bartolomeus, TAMAN GALAXI</option>
+                <option value="Bekasi, St. Clara, BEKASI UTARA">Bekasi, St. Clara, BEKASI UTARA</option>
+                <option value="Bekasi, Ibu Teresa, CIKARANG">Bekasi, Ibu Teresa, CIKARANG</option>
+              </optgroup>
+              <!-- Tangerang -->
+              <optgroup label="Dekenat Tangerang">
+                <option value="Tangerang, St. Matius Penginjil, BINTARO">Tangerang, St. Matius Penginjil, BINTARO</option>
+                <option value="Tangerang, St. Bernadet , CILEDUG">Tangerang, St. Bernadet , CILEDUG</option>
+                <option value="Tangerang, St. Agustinus , KARAWACI">Tangerang, St. Agustinus , KARAWACI</option>
+                <option value="Tangerang, SANTO BARNABAS RASUL, PAMULANG">Tangerang, SANTO BARNABAS RASUL, PAMULANG</option>
+                <option value="Tangerang, ST. MONIKA, SERPONG">Tangerang, ST. MONIKA, SERPONG</option>
+                <option value="Tangerang, St. Helena, CURUG">Tangerang, St. Helena, CURUG</option>
+                <option value="Tangerang, HATI ST. PERAWAN MARIA TAK BERNODA, TANGERANG">Tangerang, HATI ST. PERAWAN MARIA TAK BERNODA, TANGERANG</option>
+                <option value="Tangerang, ST. NIKODEMUS, CIPUTAT">Tangerang, ST. NIKODEMUS, CIPUTAT</option>
+                <option value="Tangerang, ST. ODILIA, CITRA RAYA">Tangerang, ST. ODILIA, CITRA RAYA</option>
+                <option value="Tangerang, Paroki Santa Maria Regina">Tangerang, Paroki Santa Maria Regina</option>
+                <option value="Tangerang, Paroki St. Laurensius, Alam Sutera">Tangerang, Paroki St. Laurensius, Alam Sutera</option>
+                <option value="Tangerang, Paroki St. Gregorius, Kota Bumi Tangerang">Tangerang, Paroki St. Gregorius, Kota Bumi Tangerang</option>
+              </optgroup>
+              <!-- Luar KAJ -->
+              <optgroup label="Luar Wilayah KAJ">
+                <option value="Luar KAJ">Luar KAJ</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">
+              Paroki (Luar KAJ) <span class="text-slate-400 font-normal">(Jika paroki di luar wilayah KAJ)</span>
+            </label>
+            <input 
+              type="text" 
+              name="paroki_luar" 
+              placeholder="Tuliskan nama paroki & keuskupan di luar KAJ" 
+              class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 bg-slate-50/50"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Konfirmasi Iuran & Pernyataan -->
+      <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 leading-relaxed">
+        <strong>Pemberitahuan Iuran:</strong> Sesuai ketentuan, calon anggota membayar iuran anggota sebesar <strong>Rp 50.000,- per 10 tahun</strong> untuk biaya administrasi dan pencetakan KTA. Petunjuk transfer dan pengumpulan pas foto akan dikirimkan oleh Sekretariat KMKI KAJ melalui email setelah formulir ini diterima.
+      </div>
+
+      <!-- Tombol Submit -->
+      <div class="pt-2">
+        <button 
+          type="submit" 
+          id="btn-submit-membership"
+          class="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-sky-600 via-sky-700 to-blue-800 hover:from-sky-500 hover:to-blue-700 text-white font-black text-base shadow-xl shadow-sky-600/20 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <svg class="w-5 h-5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>Kirim Formulir Pendaftaran Anggota &rarr;</span>
+        </button>
+      </div>
+
+    </form>
+
+    <!-- Success Feedback Overlay / Modal (Initially Hidden) -->
+    <div id="form-success-modal" class="hidden fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-4">
+      <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl border border-slate-200 text-center animate-in fade-in zoom-in duration-200">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 text-3xl">
+          ✓
+        </div>
+        <h3 class="text-2xl font-black text-slate-900 font-heading mb-2">
+          Pendaftaran Terkirim!
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 mb-6 leading-relaxed">
+          Terima kasih telah mendaftar menjadi anggota KMKI Wilayah Keuskupan Agung Jakarta. Data pendaftaran Anda telah disiapkan untuk dikirim ke email resmi sekretariat: <strong class="text-slate-900">kaj@kmki.or.id</strong>.
+        </p>
+
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-left text-xs space-y-2 mb-6 text-slate-700">
+          <div class="font-bold text-slate-900 border-b border-slate-200 pb-1">Langkah Selanjutnya:</div>
+          <div class="flex items-start gap-2">
+            <span class="text-sky-600 font-bold">1.</span>
+            <span>Sekretariat KMKI KAJ akan menghubungi email Anda untuk konfirmasi data.</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-sky-600 font-bold">2.</span>
+            <span>Kirimkan pas foto berlatar belakang polos dan bukti transfer iuran Rp 50.000 / 10 tahun.</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-sky-600 font-bold">3.</span>
+            <span>Kartu Tanda Anggota (KTA) akan diterbitkan dan dikirimkan ke alamat Anda.</span>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <button 
+            type="button" 
+            id="btn-close-modal" 
+            class="w-full py-3 px-6 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm transition"
+          >
+            Tutup & Kembali
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Social & Telegram Channels Section: Follow Join Us Now -->
+  <div class="mt-12 p-8 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <span class="px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 text-xs font-bold uppercase tracking-wider border border-sky-400/30">
+        Join Us Now
+      </span>
+      <h3 class="text-2xl font-black mt-2 font-heading">
+        Saluran Komunikasi Resmi KMKI KAJ
+      </h3>
+      <p class="text-xs sm:text-sm text-slate-400 mt-1">
+        Bergabunglah bersama jejaring dokter dan tenaga medis Katolik se-KAJ melalui channel Telegram, Instagram, dan Facebook resmi:
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+      <!-- 1. Telegram Private: Info Kegiatan KMKI KAJ -->
+      <a 
+        href="https://t.me/+C8fyLv51b7mhWQWm" 
+        target="_blank" 
+        rel="noopener" 
+        class="p-5 rounded-2xl bg-slate-800/80 hover:bg-sky-900/40 border border-slate-700 hover:border-sky-400 transition group flex flex-col justify-between"
+      >
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-lg group-hover:scale-110 transition">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+              </svg>
+            </span>
+            <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-400/30">
+              Private
+            </span>
+          </div>
+          <h4 class="font-bold text-white text-sm group-hover:text-sky-300 transition">
+            Info Kegiatan KMKI KAJ
+          </h4>
+          <p class="text-[11px] text-slate-400 mt-1">
+            Channel resmi info kegiatan, misa, rekoleksi & program KAJ.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs font-bold text-sky-400 flex items-center justify-between">
+          <span>Gabung Channel</span>
+          <span>&rarr;</span>
+        </div>
+      </a>
+
+      <!-- 2. Telegram Public: Info Seminar Kedokteran Jakarta -->
+      <a 
+        href="https://t.me/infoseminardokter" 
+        target="_blank" 
+        rel="noopener" 
+        class="p-5 rounded-2xl bg-slate-800/80 hover:bg-sky-900/40 border border-slate-700 hover:border-sky-400 transition group flex flex-col justify-between"
+      >
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-lg group-hover:scale-110 transition">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+              </svg>
+            </span>
+            <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+              Public
+            </span>
+          </div>
+          <h4 class="font-bold text-white text-sm group-hover:text-sky-300 transition">
+            Info Seminar Kedokteran Jakarta
+          </h4>
+          <p class="text-[11px] text-slate-400 mt-1">
+            Update simposium ilmiah, webinar SKP Plataran Sehat & workshop medis.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs font-bold text-sky-400 flex items-center justify-between">
+          <span>@infoseminardokter</span>
+          <span>&rarr;</span>
+        </div>
+      </a>
+
+      <!-- 3. Instagram: @kmkikaj -->
+      <a 
+        href="https://www.instagram.com/kmkikaj/" 
+        target="_blank" 
+        rel="noopener" 
+        class="p-5 rounded-2xl bg-slate-800/80 hover:bg-pink-900/30 border border-slate-700 hover:border-pink-400 transition group flex flex-col justify-between"
+      >
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-lg group-hover:scale-110 transition">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </span>
+            <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-pink-500/20 text-pink-300 border border-pink-400/30">
+              Instagram
+            </span>
+          </div>
+          <h4 class="font-bold text-white text-sm group-hover:text-pink-300 transition">
+            Instagram KMKI KAJ
+          </h4>
+          <p class="text-[11px] text-slate-400 mt-1">
+            Galeri dokumentasi, flyer seminar & informasi komunitas.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs font-bold text-pink-400 flex items-center justify-between">
+          <span>@kmkikaj</span>
+          <span>&rarr;</span>
+        </div>
+      </a>
+
+      <!-- 4. Facebook: kmkikajakarta -->
+      <a 
+        href="https://www.facebook.com/kmkikajakarta" 
+        target="_blank" 
+        rel="noopener" 
+        class="p-5 rounded-2xl bg-slate-800/80 hover:bg-blue-900/30 border border-slate-700 hover:border-blue-400 transition group flex flex-col justify-between"
+      >
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-lg group-hover:scale-110 transition">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </span>
+            <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-400/30">
+              Facebook
+            </span>
+          </div>
+          <h4 class="font-bold text-white text-sm group-hover:text-blue-300 transition">
+            Facebook KMKI KAJ
+          </h4>
+          <p class="text-[11px] text-slate-400 mt-1">
+            Halaman resmi komunitas medik Katolik di Keuskupan Agung Jakarta.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs font-bold text-blue-400 flex items-center justify-between">
+          <span>kmkikajakarta</span>
+          <span>&rarr;</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const form = document.getElementById('kaj-membership-form') as HTMLFormElement | null;
+  const modal = document.getElementById('form-success-modal');
+  const btnClose = document.getElementById('btn-close-modal');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      
+      const subject = `[Pendaftaran Anggota KMKI KAJ] ${fd.get('nama_gelar')} - ${fd.get('gelar')}`;
+      
+      let body = `FORMULIR PENDAFTARAN ANGGOTA KMKI WILAYAH KAJ\n`;
+      body += `==============================================\n\n`;
+      body += `1. IDENTITAS & KONTAK:\n`;
+      body += `Nama Lengkap & Gelar : ${fd.get('nama_gelar')}\n`;
+      body += `No. Telepon / HP 1   : ${fd.get('telepon_1')}\n`;
+      body += `Email 1              : ${fd.get('email_1')}\n`;
+      if (fd.get('telepon_2')) body += `No. Telepon / HP 2   : ${fd.get('telepon_2')}\n`;
+      if (fd.get('email_2'))   body += `Email 2              : ${fd.get('email_2')}\n`;
+      body += `\n2. PROFESI & PENDIDIKAN:\n`;
+      body += `Gelar / Kategori     : ${fd.get('gelar')}\n`;
+      if (fd.get('nakes_lainnya')) body += `Tenaga Kesehatan Lain: ${fd.get('nakes_lainnya')}\n`;
+      body += `Asal Universitas     : ${fd.get('universitas')}\n`;
+      if (fd.get('tahun_masuk'))   body += `Tahun Masuk          : ${fd.get('tahun_masuk')}\n`;
+      body += `Tempat Bekerja       : ${fd.get('tempat_bekerja')}\n`;
+      body += `\n3. TANGGAL LAHIR:\n`;
+      body += `Tanggal Lahir        : ${fd.get('tanggal_lahir')} ${fd.get('bulan_lahir')} ${fd.get('tahun_lahir')}\n`;
+      body += `\n4. DOMISILI & GEREJAWI:\n`;
+      body += `Alamat Lengkap       : ${fd.get('alamat_domisili')}\n`;
+      body += `Kabupaten            : ${fd.get('kabupaten')}\n`;
+      body += `Kota                 : ${fd.get('kota')}\n`;
+      body += `Dekenat              : ${fd.get('dekenat')}\n`;
+      if (fd.get('dekenat_luar'))  body += `Dekenat Luar KAJ     : ${fd.get('dekenat_luar')}\n`;
+      body += `Paroki               : ${fd.get('paroki')}\n`;
+      if (fd.get('paroki_luar'))   body += `Paroki Luar KAJ      : ${fd.get('paroki_luar')}\n`;
+      body += `\n==============================================\n`;
+      body += `Catatan: Pemohon memahami kewajiban iuran anggota Rp 50.000 / 10 tahun untuk pembuatan KTA.\n`;
+
+      if (modal) {
+        modal.classList.remove('hidden');
+      }
+
+      // Open mailto
+      const mailtoUrl = `mailto:kaj@kmki.or.id?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      setTimeout(() => {
+        window.location.href = mailtoUrl;
+      }, 600);
+    });
+  }
+
+  if (btnClose && modal) {
+    btnClose.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      if (form) form.reset();
+    });
+  }
+</script>

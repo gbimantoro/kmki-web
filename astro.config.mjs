@@ -21,6 +21,10 @@ export default defineConfig({
     '/ccpg2026kaj/poster': '/ccpg2026/call-for-poster/',
     '/ccpg2026kaj/call-for-paper': '/ccpg2026/call-for-poster/',
     '/ccpg2026kaj/call-for-abstract': '/ccpg2026/call-for-poster/',
+    '/pendaftaran-anggota-2': '/keanggotaan/pendaftaran-anggota-2/',
+    '/pendaftaran-anggota': '/keanggotaan/pendaftaran-anggota-2/',
+    '/kaj/pendaftaran-anggota-2': '/kaj/keanggotaan/pendaftaran-anggota-2/',
+    '/kaj/pendaftaran-anggota': '/kaj/keanggotaan/pendaftaran-anggota-2/',
   },
   integrations: [mdx()],
   vite: {
