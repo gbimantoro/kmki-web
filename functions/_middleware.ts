@@ -15,7 +15,6 @@ export async function onRequest(context: { request: Request; next: () => Promise
 
   // Handle Call for Poster & Abstract shortcuts
   if (
-    cleanPath === '/call-for-poster' ||
     cleanPath === '/poster' ||
     cleanPath === '/call-for-paper' ||
     cleanPath === '/paper' ||
@@ -30,7 +29,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
     cleanPath === '/ccpg2026kaj/call-for-paper' ||
     cleanPath === '/ccpg2026kaj/call-for-abstract'
   ) {
-    return Response.redirect(`${url.origin}/ccpg2026/call-for-poster/`, 302);
+    return Response.redirect(`${url.origin}/call-for-poster/`, 302);
   }
 
   // Redirect /ccpg2026kaj or /ccpg20226kaj path directly to /ccpg2026/
