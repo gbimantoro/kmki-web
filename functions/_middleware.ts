@@ -15,7 +15,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
     cleanPath === '/call-for-paper' ||
     cleanPath === '/paper'
   ) {
-    return Response.redirect(`${url.origin}/ccpg2026/call-for-abstract`, 302);
+    return Response.redirect(`${url.origin}/ccpg2026/call-for-abstract/`, 302);
   }
 
   // If request is to ccpg2026 subdomain and at root, redirect to /ccpg2026/
