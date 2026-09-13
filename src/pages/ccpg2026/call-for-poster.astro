@@ -3,7 +3,7 @@ import EventLayout from '../../layouts/EventLayout.astro';
 import CCPGNavbar from '../../components/CCPGNavbar.astro';
 import Medical3DVector from '../../components/Medical3DVector.astro';
 
-const emailDestination = "Nanny.djaja@atmajaya.ac.id";
+const emailDestination = "nanny.djaja@atmajaya.ac.id";
 const emailSubject = "ABSTRACT – CPG 2026 – [Nama Penulis]";
 const mailtoLink = `mailto:${emailDestination}?subject=${encodeURIComponent(emailSubject)}`;
 const waContact = "+62 821-1101-3865";
@@ -80,8 +80,8 @@ const waLink = "https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20s
 
           <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-md">
             <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Bentuk Presentasi:</span>
-            <p class="text-sm sm:text-base font-black text-white mt-1">E-Poster / Oral</p>
-            <span class="text-[11px] text-sky-300">Sesuai hasil review juri ilmiah</span>
+            <p class="text-sm sm:text-base font-black text-white mt-1">E-Poster</p>
+            <span class="text-[11px] text-sky-300">Khusus E-Poster Ilmiah</span>
           </div>
 
           <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-md">
@@ -93,7 +93,7 @@ const waLink = "https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20s
           <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-md">
             <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Email Pengiriman:</span>
             <a href={mailtoLink} class="text-xs sm:text-sm font-bold text-sky-400 hover:underline block truncate mt-1">
-              {emailDestination}
+              <!--email_off-->nanny.djaja@atmajaya.ac.id<!--/email_off-->
             </a>
             <span class="text-[11px] text-slate-400">Subject: ABSTRACT - CPG 2026</span>
           </div>
@@ -425,7 +425,7 @@ const waLink = "https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20s
                 <li class="flex items-start gap-3">
                   <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
                   <div>
-                    <strong>Bentuk Diseminasi:</strong> Abstrak yang diterima berhak dipresentasikan sebagai <strong class="text-amber-300">Oral Presentation</strong> atau <strong class="text-sky-300">E-Poster</strong>.
+                    <strong>Bentuk Diseminasi:</strong> Seluruh karya yang diterima dipresentasikan secara eksklusif dalam bentuk <strong class="text-amber-300 font-bold">E-Poster</strong>.
                   </div>
                 </li>
               </ul>
@@ -466,7 +466,7 @@ const waLink = "https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20s
                     href={mailtoLink}
                     class="text-sm font-black text-amber-300 hover:underline block font-mono"
                   >
-                    {emailDestination}
+                    <!--email_off-->nanny.djaja@atmajaya.ac.id<!--/email_off-->
                   </a>
                 </div>
 
@@ -603,7 +603,7 @@ const waLink = "https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20s
               href={mailtoLink}
               class="text-sky-400 hover:text-sky-300 font-bold underline"
             >
-              Kirim ke {emailDestination} &rarr;
+              Kirim ke <!--email_off-->nanny.djaja@atmajaya.ac.id<!--/email_off--> &rarr;
             </a>
           </div>
         </div>
