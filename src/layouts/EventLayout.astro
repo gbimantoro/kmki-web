@@ -68,5 +68,16 @@ const {
       </span>
     </a>
 
+    <!-- Adaptive Domain Display Script -->
+    <script is:inline>
+      if (typeof window !== 'undefined') {
+        const host = window.location.host;
+        if (host.includes('kaj')) {
+          document.querySelectorAll('.lms-domain-display').forEach(el => {
+            el.textContent = `${host}/lms`;
+          });
+        }
+      }
+    </script>
   </body>
 </html>
