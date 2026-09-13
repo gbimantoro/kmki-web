@@ -1,0 +1,1256 @@
+---
+import KAJLayout from '../../layouts/KAJLayout.astro';
+import Medical3DVector from '../../components/Medical3DVector.astro';
+---
+
+<KAJLayout 
+  title="KMKI Wilayah KAJ - Komunitas Medik Katolik Indonesia Keuskupan Agung Jakarta"
+  description="Portal resmi KMKI Wilayah Keuskupan Agung Jakarta (KAJ). Wadah perhimpunan profesi dan pelayanan kasih tenaga medis Katolik di DKI Jakarta, Tangerang, dan Bekasi. Berakar pada iman, unggul dalam kompetensi medis dan bioetika."
+>
+
+  <!-- HERO SECTION: KAJ Standard -->
+  <section class="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden bg-gradient-to-b from-sky-50/80 via-white to-slate-50 bg-grid-pattern">
+    <!-- 3D Glowing Ambient Orbs -->
+    <div class="vibrant-glow-blue w-96 h-96 -top-20 -left-20 opacity-60"></div>
+    <div class="vibrant-glow-amber w-[450px] h-[450px] top-1/3 -right-20 opacity-40"></div>
+    <div class="vibrant-glow-emerald w-80 h-80 bottom-0 left-1/3 opacity-30"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Top Announcement Pill -->
+      <div class="flex justify-center mb-6">
+        <a 
+          href="/ccpg2026" 
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 border border-sky-200 text-xs sm:text-sm font-semibold text-slate-700 shadow-xs hover:border-amber-400 hover:shadow-md transition group backdrop-blur-xs"
+        >
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+          </span>
+          <span class="text-sky-700 font-bold">Event Akbar KMKI KAJ:</span>
+          <span class="text-slate-600 font-medium hidden sm:inline">Simposium Ilmiah 9th #CCPG2026 (7-8 Nov 2026) di RS Carolus</span>
+          <span class="text-amber-600 font-bold group-hover:translate-x-0.5 transition">&rarr; Info & Pendaftaran</span>
+        </a>
+      </div>
+
+      <!-- Main Headline & Intro -->
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 mb-3">
+          <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider border border-sky-200">
+            Wilayah Keuskupan Agung Jakarta
+          </span>
+          <span class="text-xs text-slate-500 font-medium">DKI Jakarta • Tangerang • Bekasi</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] mb-6 font-heading">
+          Melayani dengan <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-blue-700 to-indigo-800">Kasih Kristiani</span>, Berpadu dalam <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-700">Kompetensi Medis</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed mb-8">
+          Wadah perhimpunan profesi bagi para dokter umum, dokter spesialis, residen, dokter gigi, dan tenaga medis Katolik di wilayah pastoral Keuskupan Agung Jakarta. Bersaksi melalui pelayanan kesehatan yang berakar pada iman, unggul dalam ilmu klinis, dan teguh pada keluhuran bioetika Gereja.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="#keanggotaan" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-sky-600 via-sky-700 to-blue-800 hover:from-sky-500 hover:to-blue-700 shadow-xl shadow-sky-600/25 hover:shadow-sky-600/35 transition transform hover:-translate-y-0.5"
+          >
+            <svg class="w-5 h-5 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="8.5" cy="7" r="4"/>
+              <line x1="20" y1="8" x2="20" y2="14"/>
+              <line x1="23" y1="11" x2="17" y2="11"/>
+            </svg>
+            <span>Daftar Anggota KMKI KAJ</span>
+          </a>
+
+          <a 
+            href="/ccpg2026" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold text-slate-900 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 transition transform hover:-translate-y-0.5"
+          >
+            <span>🎓</span>
+            <span>Simposium CCPG 2026</span>
+          </a>
+
+          <a 
+            href="#kegiatan" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 shadow-sm hover:shadow transition"
+          >
+            <svg class="w-5 h-5 text-sky-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Program & Pelayanan</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card with Official Logo & Badges -->
+      <div class="relative max-w-5xl mx-auto mt-8">
+        <!-- Floating 3D Graphic Elements -->
+        <div class="absolute -top-6 -left-6 z-20 hidden md:block">
+          <div class="glass-panel p-3.5 rounded-2xl shadow-xl flex items-center gap-3 border border-white">
+            <Medical3DVector name="cross-asclepius" size={46} />
+            <div>
+              <p class="text-xs font-bold text-slate-900">4 Pilar Medik Katolik</p>
+              <p class="text-[11px] text-slate-500">Fides • Scientia • Compassio • Mores</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute -bottom-6 -right-6 z-20 hidden md:block">
+          <div class="glass-panel p-3.5 rounded-2xl shadow-xl flex items-center gap-3 border border-white">
+            <Medical3DVector name="award-skp" size={46} />
+            <div>
+              <p class="text-xs font-bold text-slate-900">Continuous Medical Education</p>
+              <p class="text-[11px] text-slate-500">Simposium & SKP Resmi Kemenkes RI</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Banner Card -->
+        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 relative">
+          <img 
+            src="/images/header.jpg" 
+            alt="KMKI KAJ - Spiritualitas dan Kedokteran Katolik" 
+            class="w-full h-64 sm:h-80 md:h-96 object-cover object-center opacity-85 hover:scale-102 transition duration-700"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent flex flex-col justify-end p-6 sm:p-10">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-amber-400 bg-white p-1 shadow-md shrink-0">
+                <img src="/images/assets_extracted/clean/logo-kmki-kaj.png" alt="Logo KMKI KAJ" class="w-full h-full object-contain rounded-full" />
+              </div>
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-300">Komunitas Medik Katolik Indonesia</span>
+                <p class="text-white text-base sm:text-2xl font-black font-heading">Wilayah Keuskupan Agung Jakarta</p>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
+              Mewadahi dokter dan tenaga kesehatan Katolik di 68 paroki dan 9 dekenat se-KAJ dalam semangat persaudaraan Injili, pengabdian karitatif, dan pengembangan keprofesian berkelanjutan.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Ribbon: 4 Key Facts -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto mt-12">
+        <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-sky-700 shrink-0">
+              <Medical3DVector name="hospital" size={28} />
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-black text-slate-900 font-heading">68+</p>
+              <p class="text-xs text-slate-500 font-medium">Paroki di 9 Dekenat KAJ</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
+              <Medical3DVector name="stethoscope-ai" size={28} />
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-black text-slate-900 font-heading">1.000+</p>
+              <p class="text-xs text-slate-500 font-medium">Dokter & Nakes Katolik</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
+              <Medical3DVector name="shield-check" size={28} />
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-black text-slate-900 font-heading">2 RS</p>
+              <p class="text-xs text-slate-500 font-medium">Mitra: Carolus & Atma Jaya</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-700 shrink-0">
+              <Medical3DVector name="award-skp" size={28} />
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-black text-slate-900 font-heading">9th CPG</p>
+              <p class="text-xs text-slate-500 font-medium">Simposium Nasional 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: TENTANG KAMI & 4 PILAR -->
+  <section id="tentang" class="py-20 bg-white border-y border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2">
+            <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider">
+              Tentang KMKI KAJ
+            </span>
+            <span class="text-xs text-slate-400 font-medium">Profil & Identitas Organisasi</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight font-heading">
+            Wadah Berbagi, Bertumbuh, dan Bersaksi bagi <span class="text-sky-600">Tenaga Medis Katolik</span> di Ibu Kota
+          </h2>
+
+          <p class="text-slate-600 text-base leading-relaxed">
+            Komunitas Medik Katolik Indonesia (KMKI) Wilayah Keuskupan Agung Jakarta merupakan organisasi nirlaba perhimpunan tenaga medis Katolik yang dibentuk sebagai tempat untuk saling berbagi, berkomunikasi, dan bersinergi dalam melayani Gereja dan masyarakat luas.
+          </p>
+
+          <p class="text-slate-600 text-base leading-relaxed">
+            Mencakup wilayah DKI Jakarta, Tangerang Raya, dan Bekasi, KMKI KAJ membina para dokter dan nakes untuk tidak hanya mengasah ketajaman klinis berbasis sains kedokteran modern, namun juga memperdalam kerohanian serta menjunjung tinggi ajaran moral dan bioetika Katolik di tengah dinamika tantangan zaman.
+          </p>
+
+          <div class="p-4 rounded-2xl bg-sky-50 border border-sky-100 flex items-start gap-4">
+            <div class="p-2.5 bg-white rounded-xl shadow-xs shrink-0 text-sky-600">
+              <Medical3DVector name="cross-asclepius" size={32} />
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Afiliasi Pastoral Komisi Kesehatan</h4>
+              <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">
+                KMKI KAJ berkarya selaras dengan arah dasar pastoral Keuskupan Agung Jakarta (KAJ) serta berkoordinasi erat dengan Komisi Kesehatan Konferensi Waligereja Indonesia (KWI).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-sm relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-48 h-48 bg-sky-200/30 rounded-full blur-3xl pointer-events-none"></div>
+
+            <h3 class="text-xl font-bold text-slate-900 mb-6 font-heading flex items-center justify-between">
+              <span>4 Pilar Medik Katolik</span>
+              <span class="text-xs font-semibold text-sky-600 bg-sky-100 px-2.5 py-1 rounded-full">Landasan Pelayanan</span>
+            </h3>
+
+            <div class="space-y-4">
+              <!-- Pilar 1: Fides -->
+              <div class="p-4 rounded-xl bg-white border border-slate-200/70 shadow-xs flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-lg bg-sky-100 flex items-center justify-center text-sky-700 font-bold shrink-0 text-sm">
+                  01
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                    <span>Fides (Iman)</span>
+                    <span class="text-[10px] text-sky-700 bg-sky-50 px-2 py-0.5 rounded font-mono">Spiritualitas</span>
+                  </h4>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Menghidupi panggilan profesi sebagai rekan sekerja Kristus Sang Tabib Agung, memperdalam doa dan Ekaristi dalam menjalankan tugas penyembuhan sehari-hari.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Pilar 2: Scientia -->
+              <div class="p-4 rounded-xl bg-white border border-slate-200/70 shadow-xs flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-lg bg-blue-100 flex items-center justify-center text-blue-700 font-bold shrink-0 text-sm">
+                  02
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                    <span>Scientia (Ilmu Klinis Mutakhir)</span>
+                    <span class="text-[10px] text-blue-700 bg-blue-50 px-2 py-0.5 rounded font-mono">EBM & CME</span>
+                  </h4>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Menjaga kompetensi medis berstandar Evidence-Based Medicine (EBM), precision medicine, pemanfaatan teknologi klinis, dan pembelajaran keprofesian berkelanjutan.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Pilar 3: Compassio -->
+              <div class="p-4 rounded-xl bg-white border border-slate-200/70 shadow-xs flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold shrink-0 text-sm">
+                  03
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                    <span>Compassio (Belarasa Kasih)</span>
+                    <span class="text-[10px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-mono">Karitatif</span>
+                  </h4>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Menghadirkan kelembutan hati dan kerahiman Allah bagi orang sakit, lansia, fakir miskin, dan kelompok rentan di paroki maupun wilayah pelosok.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Pilar 4: Mores -->
+              <div class="p-4 rounded-xl bg-white border border-slate-200/70 shadow-xs flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 font-bold shrink-0 text-sm">
+                  04
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                    <span>Mores (Bioetika Katolik)</span>
+                    <span class="text-[10px] text-amber-700 bg-amber-50 px-2 py-0.5 rounded font-mono">Integritas Moral</span>
+                  </h4>
+                  <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Membela kesakralan dan martabat hidup manusia (dignitas humanae) sejak konsepsi awal hingga akhir alami sesuai Magisterium Gereja Katolik.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: VISI & 5 MISI PELAYANAN -->
+  <section id="visi-misi" class="py-20 bg-slate-50 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider border border-sky-200">
+          Visi & Misi KAJ
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-3 font-heading">
+          Arah dan Komitmen Pelayanan di Keuskupan Agung Jakarta
+        </h2>
+        <p class="text-slate-600 text-base mt-3">
+          Pedoman langkah bagi seluruh anggota dan pengurus dalam mengabdi bagi kemuliaan Tuhan dan keselamatan jiwa raga sesama.
+        </p>
+      </div>
+
+      <!-- Visi Card -->
+      <div class="mb-12 p-8 rounded-3xl bg-gradient-to-br from-sky-900 via-slate-900 to-sky-950 text-white shadow-xl relative overflow-hidden">
+        <div class="vibrant-glow-blue w-72 h-72 -top-10 -right-10 opacity-30"></div>
+        <div class="relative z-10 max-w-3xl">
+          <span class="text-xs font-bold tracking-wider uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
+            Visi Utama KMKI Wilayah KAJ
+          </span>
+          <h3 class="text-xl sm:text-2xl font-black mt-4 leading-relaxed font-heading">
+            "Menjadi komunitas medik Katolik yang berakar kokoh pada kasih Kristus, unggul dalam pelayanan klinis berstandar tinggi, teguh memegang etika moral kedokteran Katolik, serta aktif berbelarasa bagi sesama di Keuskupan Agung Jakarta."
+          </h3>
+        </div>
+      </div>
+
+      <!-- 5 Misi Pelayanan Cards -->
+      <h3 class="text-xl font-bold text-slate-900 mb-6 font-heading flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-sky-600"></span>
+        <span>5 Misi Pelayanan KMKI KAJ</span>
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center text-sky-700 mb-4">
+            <Medical3DVector name="award-skp" size={32} />
+          </div>
+          <span class="text-xs font-mono font-bold text-sky-600">MISI 01</span>
+          <h4 class="text-base font-bold text-slate-900 mt-1 mb-2">Simposium & CME Berkala</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Menyelenggarakan kongres, simposium ilmiah, dan workshop keterampilan klinis terakreditasi Kemenkes RI/IDI secara periodik guna memperbarui keilmuan dokter umum dan spesialis.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 mb-4">
+            <Medical3DVector name="cross-asclepius" size={32} />
+          </div>
+          <span class="text-xs font-mono font-bold text-amber-600">MISI 02</span>
+          <h4 class="text-base font-bold text-slate-900 mt-1 mb-2">Seminar Etika & Bioetika</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Menyelenggarakan seminar dan forum kajian mendalam tentang masalah-masalah etik-moral kedokteran terkini agar tenaga medis bertindak selaras dengan ajaran moral Gereja Katolik.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 mb-4">
+            <Medical3DVector name="heart-pulse" size={32} />
+          </div>
+          <span class="text-xs font-mono font-bold text-emerald-600">MISI 03</span>
+          <h4 class="text-base font-bold text-slate-900 mt-1 mb-2">Seminar Awam & Pelayanan Paroki</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Menyediakan edukasi kesehatan masyarakat bagi umat awam di paroki-paroki se-KAJ, bakti sosial pemeriksaan kesehatan, serta pendampingan kesehatan lansia dan keluarga.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-700 mb-4">
+            <Medical3DVector name="hospital" size={32} />
+          </div>
+          <span class="text-xs font-mono font-bold text-purple-600">MISI 04</span>
+          <h4 class="text-base font-bold text-slate-900 mt-1 mb-2">Kegiatan Rohani: Misa & Ziarek</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Mempererat persaudaraan dan penyegaran iman para tenaga medis melalui Perayaan Misa Pesta Santo Lukas (Pelindung Dokter), rekoleksi hening, dan ziarah rekreasi (Ziarek).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 mb-4">
+            <Medical3DVector name="brain-ai" size={32} />
+          </div>
+          <span class="text-xs font-mono font-bold text-blue-600">MISI 05</span>
+          <h4 class="text-base font-bold text-slate-900 mt-1 mb-2">Publikasi, Info Board & Bursa Nakes</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Mempublikasikan buletin informasi berkala, mengelola Info Board kebutuhan tenaga kesehatan untuk rumah sakit dan klinik Katolik, serta menjalin jejaring dokter Katolik nasional & FIAMC.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-sky-600 to-blue-800 text-white shadow-xs flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-200 bg-white/20 px-2.5 py-0.5 rounded-full">
+              Kolaborasi KAJ
+            </span>
+            <h4 class="text-lg font-bold mt-3 font-heading">Siap Melayani Bersama?</h4>
+            <p class="text-xs text-sky-100 mt-1 leading-relaxed">
+              Bergabunglah bersama ribuan rekan sejawat dokter dan tenaga medis Katolik se-Keuskupan Agung Jakarta.
+            </p>
+          </div>
+          <div class="pt-4">
+            <a 
+              href="#keanggotaan" 
+              class="inline-block w-full text-center py-2.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow transition"
+            >
+              Gabung Menjadi Anggota KAJ &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: EVENT UNGGULAN KAJ - CCPG 2026 -->
+  <section id="ccpg2026" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <!-- Ambient Glows -->
+    <div class="vibrant-glow-blue w-96 h-96 -top-20 -left-20 opacity-40"></div>
+    <div class="vibrant-glow-amber w-96 h-96 bottom-0 right-0 opacity-30"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-sky-950 via-slate-850 to-slate-900 border-2 border-amber-400/40 shadow-2xl relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-5">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-amber-400 text-slate-950">
+                EVENT UNGGULAN RESMI KMKI KAJ
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                Offline Symposium & Workshop
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                SKP Kemenkes RI
+              </span>
+            </div>
+
+            <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight font-heading leading-tight">
+              9th Current Clinical Practice Guidelines <span class="text-amber-400">(#CCPG2026)</span>
+            </h2>
+
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              Simposium klinis ilmiah berskala nasional yang diselenggarakan atas kolaborasi strategis <strong>Badan Pendidikan dan Pelatihan (Badiklat) FKIK Unika Atma Jaya</strong>, <strong>RS St. Carolus Jakarta</strong>, dan <strong>KMKI Wilayah Keuskupan Agung Jakarta</strong>.
+            </p>
+
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-2 text-xs sm:text-sm text-slate-300">
+              <div class="flex items-center gap-2">
+                <span class="text-amber-400 font-bold">📅 Waktu:</span>
+                <span>Sabtu & Minggu, 7 – 8 November 2026</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-amber-400 font-bold">📍 Lokasi:</span>
+                <span>Auditorium Gedung Antonius Lt. 4, RS St. Carolus, Jl. Salemba Raya No. 41, Jakarta Pusat</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-amber-400 font-bold">🏆 Fitur:</span>
+                <span>Plenary Lectures, Parallel Sessions, Call for Poster (E-Poster), Akreditasi Plataran Sehat</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons for CCPG -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a 
+                href="/ccpg2026" 
+                class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-sm shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2"
+              >
+                <span>Portal Resmi CCPG 2026 &rarr;</span>
+              </a>
+
+              <a 
+                href="/call-for-poster" 
+                class="px-6 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow transition flex items-center gap-2"
+              >
+                <span>Call for Poster (E-Poster)</span>
+              </a>
+
+              <a 
+                href="/lms" 
+                target="_blank" 
+                rel="noopener" 
+                class="px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-sm font-medium transition"
+              >
+                Plataran Sehat Kemenkes
+              </a>
+            </div>
+
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl p-6 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 shadow-xl space-y-4">
+              <h4 class="text-base font-bold text-amber-300 font-heading border-b border-slate-700 pb-3">
+                Highlight Simposium 2026
+              </h4>
+
+              <div class="space-y-3 text-xs text-slate-300">
+                <div class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-lg bg-sky-500/20 text-sky-300 flex items-center justify-center shrink-0 font-bold">1</span>
+                  <p><strong class="text-white">Evidence-Based Medicine:</strong> Pembaruan pedoman tata laksana klinis penyakit kardiovaskular, endokrin, respirasi, dan infeksi tropis.</p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-lg bg-sky-500/20 text-sky-300 flex items-center justify-center shrink-0 font-bold">2</span>
+                  <p><strong class="text-white">Bioetika Kedokteran:</strong> Sesi khusus telaah etika klinis dan moralitas dalam pelayanan kedokteran modern.</p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-lg bg-sky-500/20 text-sky-300 flex items-center justify-center shrink-0 font-bold">3</span>
+                  <p><strong class="text-white">Lomba Poster Ilmiah:</strong> Kesempatan publikasi ilmiah E-Poster bagi dokter umum, spesialis, residen, dan mahasiswa.</p>
+                </div>
+              </div>
+
+              <div class="pt-2 border-t border-slate-700/80">
+                <p class="text-[11px] text-slate-400">
+                  Dikelola bersama Sekretariat KMKI Wilayah KAJ & Badiklat FKIK Atma Jaya.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: PROGRAM & KEGIATAN KAJ -->
+  <section id="kegiatan" class="py-20 bg-white border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider border border-sky-200">
+          Aktivitas & Program Kerja
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-3 font-heading">
+          Program & Kegiatan Berkala KMKI KAJ
+        </h2>
+        <p class="text-slate-600 text-base mt-3">
+          Mulai dari peningkatan kompetensi medis ilmiah, seminar etika, edukasi umat paroki, hingga penyegaran rohani tenaga kesehatan.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Program 1: Simposium Ilmiah & Workshop Medis -->
+        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs hover:shadow-xl transition flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center mb-5 group-hover:scale-110 transition transform">
+              <Medical3DVector name="stethoscope-ai" size={38} />
+            </div>
+            <span class="text-xs font-bold text-sky-700 bg-sky-100/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+              Ilmiah & CME
+            </span>
+            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3 font-heading">
+              Seminar & Workshop Medis
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Penyelenggaraan simposium klinis, workshop keterampilan praktis dokter, serta seminar Continuous Medical Education (CME) terakreditasi SKP Kemenkes RI/IDI secara berkala.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
+            <span class="text-slate-500">Target: Dokter Umum & Spesialis</span>
+            <a href="/ccpg2026" class="text-sky-600 font-bold hover:underline">CCPG 2026 &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program 2: Seminar Etika & Bioetika -->
+        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs hover:shadow-xl transition flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-5 group-hover:scale-110 transition transform">
+              <Medical3DVector name="cross-asclepius" size={38} />
+            </div>
+            <span class="text-xs font-bold text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+              Moral Kedokteran
+            </span>
+            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3 font-heading">
+              Seminar Bioetika Katolik
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Kajian mendalam menghadapi isu-isu biomedis mutakhir, etika reproduksi, perawatan paliatif, penolakan eutanasia, dan pendampingan sakramental bagi pasien terminal.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
+            <span class="text-slate-500">Bersama Pakar Teologi Moral</span>
+            <a href="#kontak" class="text-amber-700 font-bold hover:underline">Info Diskusi &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program 3: Seminar Awam Paroki -->
+        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs hover:shadow-xl transition flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-5 group-hover:scale-110 transition transform">
+              <Medical3DVector name="heart-pulse" size={38} />
+            </div>
+            <span class="text-xs font-bold text-emerald-800 bg-emerald-100/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+              Edukasi Umat
+            </span>
+            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3 font-heading">
+              Seminar Awam Paroki
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Penyuluhan kesehatan preventif kepada umat di 68 paroki se-KAJ (penyakit metabolik, kesehatan lansia, gizi anak, pencegahan stroke, dan kesehatan mental keluarga).
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
+            <span class="text-slate-500">Pelayanan Lintas Paroki</span>
+            <a href="https://wa.me/6282111013865?text=Halo%20Sekretariat%20KMKI%20KAJ,%20paroki%20kami%20ingin%20mengadakan%20seminar%20kesehatan%20awam" target="_blank" rel="noopener" class="text-emerald-700 font-bold hover:underline">Undang Pembicara &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program 4: Kegiatan Rohani (Misa & Ziarek) -->
+        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs hover:shadow-xl transition flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center mb-5 group-hover:scale-110 transition transform">
+              <Medical3DVector name="hospital" size={38} />
+            </div>
+            <span class="text-xs font-bold text-purple-800 bg-purple-100/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+              Spiritualitas Tenaga Medis
+            </span>
+            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3 font-heading">
+              Misa St. Lukas & Ziarek
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Perayaan Ekaristi Pesta Santo Lukas (Pelindung Para Dokter), Rekoleksi tahunan tenaga kesehatan, Ziarah Rekreasi (Ziarek) ke Gua Maria, dan doa bersama perhimpunan.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
+            <span class="text-slate-500">Pesta St. Lukas: Tiap Oktober</span>
+            <a href="https://t.me/+C8fyLv51b7mhWQWm" target="_blank" rel="noopener" class="text-purple-700 font-bold hover:underline">Jadwal Rohani &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program 5: Kongres Nasional & Internasional -->
+        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs hover:shadow-xl transition flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center mb-5 group-hover:scale-110 transition transform">
+              <Medical3DVector name="award-skp" size={38} />
+            </div>
+            <span class="text-xs font-bold text-indigo-800 bg-indigo-100/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+              Konas & FIAMC
+            </span>
+            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3 font-heading">
+              Konas KMKI & Konferensi FIAMC
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Berpartisipasi aktif dalam Kongres Nasional (Konas) KMKI di berbagai keuskupan Indonesia serta pertemuan asosiasi dokter Katolik sedunia (FIAMC & AFCMA).
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
+            <span class="text-slate-500">Jejaring Global</span>
+            <a href="https://kmki.or.id/" class="text-indigo-700 font-bold hover:underline">Portal Nasional &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Program 6: Bakti Sosial & Posko Medis KAJ -->
+        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs hover:shadow-xl transition flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center mb-5 group-hover:scale-110 transition transform">
+              <Medical3DVector name="shield-check" size={38} />
+            </div>
+            <span class="text-xs font-bold text-teal-800 bg-teal-100/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+              Aksi Nyata
+            </span>
+            <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3 font-heading">
+              Bakti Medis & Posko Perayaan KAJ
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Mengerahkan tim medis relawan dokter untuk posko kesehatan perayaan hari besar gerejawi, pentahbisan imam, kunjungan Bapa Suci, serta tanggap bencana darurat.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
+            <span class="text-slate-500">Relawan Nakes Katolik</span>
+            <a href="#infoboard" class="text-teal-700 font-bold hover:underline">Info Relawan &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: KEANGGOTAAN KMKI KAJ -->
+  <section id="keanggotaan" class="py-20 bg-slate-50 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider border border-sky-200">
+          Pendaftaran & Komunitas
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-3 font-heading">
+          Keanggotaan KMKI Wilayah KAJ
+        </h2>
+        <p class="text-slate-600 text-base mt-3">
+          Mari bergabung bersama keluarga besar tenaga medis Katolik di Keuskupan Agung Jakarta. Tumbuh bersama dalam iman dan karya pelayanan nyata.
+        </p>
+      </div>
+
+      <!-- 3 Kolom Komprehensif: Syarat, Langkah, Keuntungan -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        
+        <!-- Syarat Pendaftaran -->
+        <div class="p-7 rounded-3xl bg-white border border-slate-200/80 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center mb-5 font-black text-lg">
+              ✓
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4 font-heading">
+              Syarat Pendaftaran Anggota
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-2.5">
+                <span class="text-sky-600 font-bold">1.</span>
+                <span>Warga Negara Indonesia atau Tenaga Medis beragama Katolik (memiliki Surat Baptis Katolik).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-sky-600 font-bold">2.</span>
+                <span>Berprofesi sebagai Dokter Umum, Dokter Spesialis/Subspesialis, Dokter Gigi, Residen PPDS, Koas (dokter muda), atau Nakes Katolik lainnya.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-sky-600 font-bold">3.</span>
+                <span>Bertugas, bertempat tinggal, atau berkarya di wilayah pastoral Keuskupan Agung Jakarta (DKI Jakarta, Tangerang, atau Bekasi).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-sky-600 font-bold">4.</span>
+                <span>Memiliki komitmen moral untuk menghormati kode etik kedokteran dan ajaran moral Katolik.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <span class="text-xs text-slate-400">Terbuka untuk semua angkatan dokter</span>
+          </div>
+        </div>
+
+        <!-- Langkah Pendaftaran -->
+        <div class="p-7 rounded-3xl bg-white border border-slate-200/80 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-5 font-black text-lg">
+              📝
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4 font-heading">
+              3 Langkah Mudah Pendaftaran
+            </h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-7 h-7 rounded-full bg-amber-400 text-slate-950 font-bold text-xs flex items-center justify-center shrink-0">
+                  1
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Hubungi Sekretariat WhatsApp</h4>
+                  <p class="text-xs text-slate-600 mt-0.5">Kirim pesan pendaftaran ke WhatsApp Sekretariat KMKI KAJ (+62 821-1101-3865).</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-7 h-7 rounded-full bg-amber-400 text-slate-950 font-bold text-xs flex items-center justify-center shrink-0">
+                  2
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Kirim Data & Dokumen</h4>
+                  <p class="text-xs text-slate-600 mt-0.5">Mengisi data diri ringkas (Nama, Almamater, Paroki Domisili, Nomor STR/KTA IDI).</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-7 h-7 rounded-full bg-amber-400 text-slate-950 font-bold text-xs flex items-center justify-center shrink-0">
+                  3
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Verifikasi & Resmi Bergabung</h4>
+                  <p class="text-xs text-slate-600 mt-0.5">Pengurus memverifikasi data dan memasukkan ke dalam grup komunikasi resmi anggota KAJ.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <span class="text-xs text-slate-400">Proses cepat tanpa dipungut biaya pendaftaran</span>
+          </div>
+        </div>
+
+        <!-- Keuntungan Menjadi Anggota -->
+        <div class="p-7 rounded-3xl bg-white border border-slate-200/80 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-5 font-black text-lg">
+              ⭐
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4 font-heading">
+              Keuntungan Menjadi Anggota
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span><strong>Diskon Registrasi:</strong> Tarif khusus simposium ilmiah CCPG dan webinar CME KMKI KAJ.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span><strong>Konsultasi Bioetika:</strong> Akses jejaring dokter pakar moral teologi saat menghadapi dilema klinis pasien.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span><strong>Jejaring Karir:</strong> Info prioritas lowongan dokter di RS St. Carolus, RS Atma Jaya, dan klinik Katolik se-KAJ.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span><strong>Paguyuban Rohani:</strong> Mengikuti Rekoleksi, Misa St. Lukas, dan komunitas doa nakes yang saling menguatkan.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <span class="text-xs text-slate-400">Membangun ikatan persaudaraan sejati</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Card CTA: Hubungi WA Pendaftaran -->
+      <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-sky-900 via-sky-850 to-blue-900 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-400/20 px-3 py-1 rounded-full border border-amber-400/30">
+            Formulir Pendaftaran Online
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-black mt-3 font-heading">
+            Daftarkan Diri Anda ke Sekretariat KMKI KAJ
+          </h3>
+          <p class="text-xs sm:text-sm text-sky-100 mt-1 max-w-2xl">
+            Klik tombol di bawah ini untuk mengirimkan format pesan pendaftaran anggota baru secara instan via WhatsApp Sekretariat KAJ.
+          </p>
+        </div>
+        <div class="shrink-0 w-full md:w-auto">
+          <a 
+            href="https://wa.me/6282111013865?text=Halo%20Sekretariat%20KMKI%20Wilayah%20KAJ,%20saya%20ingin%20mendaftar%20menjadi%20anggota%20KMKI%20KAJ.%20Mohon%20informasi%20langkah%20selanjutnya." 
+            target="_blank" 
+            rel="noopener"
+            class="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 shadow-lg transition transform hover:-translate-y-0.5"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.203c.044.072.044.419-.1.824z"/>
+            </svg>
+            <span>Daftar via WhatsApp KAJ &rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: INFO BOARD & KEBUTUHAN TENAGA KESEHATAN -->
+  <section id="infoboard" class="py-20 bg-white border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider border border-sky-200">
+          Papan Informasi & Karir
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-3 font-heading">
+          Info Board & Kebutuhan Tenaga Kesehatan
+        </h2>
+        <p class="text-slate-600 text-base mt-3">
+          Informasi lowongan dokter, panggilan tim medis relawan gereja, dan saluran update ilmiah di wilayah Keuskupan Agung Jakarta.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Info 1: Kebutuhan Tenaga Kesehatan / Lowongan -->
+        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-100 text-sky-800">
+                Lowongan Medis
+              </span>
+              <span class="text-xs text-slate-400 font-mono">RS & Klinik Katolik</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2 font-heading">
+              Kebutuhan Tenaga Kesehatan KAJ
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              KMKI KAJ secara aktif memfasilitasi kebutuhan tenaga medis (Dokter Umum, Dokter Gigi, Dokter Spesialis, Perawat) untuk Rumah Sakit Katolik dan Balai Pengobatan/Klinik Paroki di wilayah Jakarta, Tangerang, dan Bekasi.
+            </p>
+            <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-xs text-slate-600 space-y-1.5">
+              <p><strong class="text-slate-900">• Posisi:</strong> Dokter Umum Jaga IGD & Rawat Inap</p>
+              <p><strong class="text-slate-900">• Lokasi:</strong> Jejaring Klinik & RS Katolik KAJ</p>
+              <p><strong class="text-slate-900">• Kualifikasi:</strong> STR Aktif, Memiliki sertifikat ACLS/ATLS</p>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200">
+            <a 
+              href="https://wa.me/6282111013865?text=Halo%20Sekretariat%20KMKI%20KAJ,%20saya%20ingin%20menanyakan%20info%20kebutuhan%20tenaga%20kesehatan%20atau%20mengirimkan%20CV" 
+              target="_blank" 
+              rel="noopener"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:text-sky-800"
+            >
+              <span>Hubungi Sekretariat untuk Info Loker</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Info 2: Relawan Tim Medis Paroki & Misa Agung -->
+        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">
+                Panggilan Relawan
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Bakti Kasih</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2 font-heading">
+              Relawan Medis Perayaan KAJ
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Panggilan bagi para dokter dan perawat Katolik yang ingin mendarmabaktikan keahlian dalam posko medis perayaan gerejawi besar, perayaan misa akbar, dan peringatan Hari Orang Sakit Sedunia.
+            </p>
+            <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-xs text-slate-600 space-y-1.5">
+              <p><strong class="text-slate-900">• Tugas:</strong> Tim Medis Posko Kesehatan Gereja</p>
+              <p><strong class="text-slate-900">• Waktu:</strong> Pekan Suci, Natal, Acara Keuskupan</p>
+              <p><strong class="text-slate-900">• Benefit:</strong> Pelayanan karitatif & sertifikat apresiasi</p>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200">
+            <a 
+              href="https://wa.me/6282111013865?text=Halo%20Sekretariat%20KMKI%20KAJ,%20saya%20bersedia%20mendaftar%20sebagai%20relawan%20tim%20medis%20perayaan%20KAJ" 
+              target="_blank" 
+              rel="noopener"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800"
+            >
+              <span>Daftar Relawan Medis KAJ</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Info 3: Saluran Update Telegram & Media Sosial -->
+        <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                Kanal Informasi Cepat
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Telegram & IG</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2 font-heading">
+              Saluran Berita & Jadwal Simposium
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Dapatkan informasi jadwal kegiatan rohani, simposium kedokteran ber-SKP, dan berita seputar dunia kesehatan melalui saluran resmi:
+            </p>
+            <div class="space-y-2 text-xs">
+              <a 
+                href="https://t.me/+C8fyLv51b7mhWQWm" 
+                target="_blank" 
+                rel="noopener"
+                class="flex items-center justify-between p-2.5 rounded-xl bg-white border border-slate-200 hover:border-sky-400 transition"
+              >
+                <span class="font-medium text-slate-800">Telegram Info Kegiatan KMKI KAJ</span>
+                <span class="text-sky-600 font-bold">Gabung &rarr;</span>
+              </a>
+              <a 
+                href="https://t.me/infoseminardokter" 
+                target="_blank" 
+                rel="noopener"
+                class="flex items-center justify-between p-2.5 rounded-xl bg-white border border-slate-200 hover:border-sky-400 transition"
+              >
+                <span class="font-medium text-slate-800">Telegram Info Seminar Dokter Jakarta</span>
+                <span class="text-sky-600 font-bold">Gabung &rarr;</span>
+              </a>
+              <a 
+                href="https://www.instagram.com/kmkikaj/?hl=id" 
+                target="_blank" 
+                rel="noopener"
+                class="flex items-center justify-between p-2.5 rounded-xl bg-white border border-slate-200 hover:border-sky-400 transition"
+              >
+                <span class="font-medium text-slate-800">Instagram @kmkikaj</span>
+                <span class="text-pink-600 font-bold">Follow &rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200">
+            <span class="text-xs text-slate-400">Update berkala setiap minggu</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: 9 DEKENAT WILAYAH PELAYANAN KAJ -->
+  <section class="py-20 bg-slate-50 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider border border-sky-200">
+          Jejaring Teritorial
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-3 font-heading">
+          Wilayah Pelayanan di 9 Dekenat KAJ
+        </h2>
+        <p class="text-slate-600 text-base mt-3">
+          Tenaga medis Katolik KMKI KAJ tersebar dan berkarya di paroki-paroki yang terhimpun dalam 9 dekenat se-Keuskupan Agung Jakarta.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-sky-700 bg-sky-100 px-2.5 py-0.5 rounded-full">Dekenat 01</span>
+            <span class="text-xs text-slate-400 font-mono">Jakpus</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Jakarta Pusat</h4>
+          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+            Katedral Santa Maria Diangkat ke Surga, Theresia Menteng, Santo Paschalis Cempaka Putih, Santo Paskalis, Hati Kudus Kramat, Kristus Raja Pejompongan.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-sky-700 bg-sky-100 px-2.5 py-0.5 rounded-full">Dekenat 02</span>
+            <span class="text-xs text-slate-400 font-mono">Jakbar 1</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Jakarta Barat I</h4>
+          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+            Santo Petrus & Paulus Mangga Besar, Santa Maria de Fatima Toasebio, Bunda Hati Kudus Kemakmuran, Santo Leo Agung Jatiwaringin.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-sky-700 bg-sky-100 px-2.5 py-0.5 rounded-full">Dekenat 03</span>
+            <span class="text-xs text-slate-400 font-mono">Jakbar 2</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Jakarta Barat II</h4>
+          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+            Maria Bunda Karmel Tomang, Santo Kristoforus Grogol, Santo Andreas Kedoya, Trinitas Cengkareng, Santo Thomas Rasul Bojong Indah, Kalideres.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-sky-700 bg-sky-100 px-2.5 py-0.5 rounded-full">Dekenat 04</span>
+            <span class="text-xs text-slate-400 font-mono">Jakut</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Jakarta Utara</h4>
+          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+            Santo Yakobus Kelapa Gading, Stella Maris Pluit, Santo Lukas Sunter, Santo Alfonsus Rodriguez Pademangan, Salib Suci Cilincing, Tanjung Priok.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-sky-700 bg-sky-100 px-2.5 py-0.5 rounded-full">Dekenat 05</span>
+            <span class="text-xs text-slate-400 font-mono">Jaksel</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Jakarta Selatan</h4>
+          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+            Santo Yohanes Penginjil Blok B, Santa Perawan Maria Ratu Blok Q, Santo Stefanus Cilandak, Santo Fransiskus Asisi Tebet, Keluarga Kudus Pasar Minggu, Jagakarsa.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-sky-700 bg-sky-100 px-2.5 py-0.5 rounded-full">Dekenat 06</span>
+            <span class="text-xs text-slate-400 font-mono">Jaktim</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Jakarta Timur</h4>
+          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+            Santo Yoseph Matraman, Keluarga Kudus Rawamangun, Santo Bonaventura Pulomas, Santo Antonius Padua Bidaracina, Aloysius Gonzaga Cijantung, Duren Sawit, Halim.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded-full">Dekenat 07</span>
+            <span class="text-xs text-slate-400 font-mono">Tgr 1</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Tangerang I</h4>
+          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+            Hati Santa Perawan Maria Tak Bernoda Tangerang, Santa Helena Curug, Santo Agustinus Karawaci, Santo Gregorius Agung Kutabumi.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded-full">Dekenat 08</span>
+            <span class="text-xs text-slate-400 font-mono">Tgr 2</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Tangerang II</h4>
+          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+            Santo Monika Serpong, Santo Laurentius Alam Sutera, Santa Maria Regina Bintaro Jaya, Santo Barnabas Pamulang, Santa Odilia Citra Raya.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full">Dekenat 09</span>
+            <span class="text-xs text-slate-400 font-mono">Bks</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Bekasi</h4>
+          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+            Santo Arnoldus Janssen Bekasi, Santo Mikael Kranji, Santa Clara Harapan Indah, Ibu Teresa Cikarang, Santo Servatius Kampung Sawah, Kalimalang.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: KONTAK SEKRETARIAT KAJ -->
+  <section id="kontak" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider border border-sky-200">
+          Sekretariat KAJ
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-3 font-heading">
+          Hubungi Sekretariat KMKI Wilayah KAJ
+        </h2>
+        <p class="text-slate-600 text-base mt-3">
+          Pertanyaan seputar keanggotaan, permohonan seminar kesehatan paroki, kolaborasi kegiatan ilmiah, atau informasi CCPG 2026.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-5xl mx-auto">
+        
+        <!-- Detail Kontak -->
+        <div class="lg:col-span-6 p-8 rounded-3xl bg-slate-50 border border-slate-200/80 shadow-xs flex flex-col justify-between space-y-6">
+          <div class="space-y-6">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full border border-sky-300 bg-white p-1">
+                <img src="/images/assets_extracted/clean/logo-kmki-kaj.png" alt="Logo KAJ" class="w-full h-full object-contain rounded-full" />
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 font-heading">Sekretariat KMKI KAJ</h3>
+                <p class="text-xs text-slate-500">Komunitas Medik Katolik Indonesia Wilayah KAJ</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 text-sm text-slate-600">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-sky-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <div>
+                  <strong class="text-slate-900 block">Alamat Sekretariat:</strong>
+                  <span>Jl. Janur Elok 1 QB 7 No.1, Kelapa Gading, Jakarta Utara 14240, DKI Jakarta</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-sky-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                <div>
+                  <strong class="text-slate-900 block">Telepon Kantor:</strong>
+                  <a href="tel:0214515601" class="text-sky-600 hover:underline">021-451-5601</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-sky-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <div>
+                  <strong class="text-slate-900 block">Email Resmi:</strong>
+                  <a href="mailto:kaj@kmki.or.id" class="text-sky-600 hover:underline">kaj@kmki.or.id</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.203c.044.072.044.419-.1.824z"/>
+                </svg>
+                <div>
+                  <strong class="text-slate-900 block">WhatsApp Sekretariat:</strong>
+                  <a href="https://wa.me/6282111013865" target="_blank" rel="noopener" class="text-emerald-600 font-bold hover:underline">+62 821-1101-3865</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-200">
+            <span class="text-xs text-slate-500">Jam Layanan: Senin – Jumat, 09.00 – 16.00 WIB</span>
+          </div>
+        </div>
+
+        <!-- Call to Action Box: Chat Langsung -->
+        <div class="lg:col-span-6 p-8 rounded-3xl bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800 text-white shadow-xl flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-300 bg-amber-400/20 px-3 py-1 rounded-full border border-amber-400/30">
+              Pelayanan Cepat
+            </span>
+            <h3 class="text-2xl font-black mt-4 font-heading">
+              Butuh Informasi Cepat Seputar KMKI KAJ?
+            </h3>
+            <p class="text-sm text-sky-100 mt-2 leading-relaxed">
+              Tim sekretariat KMKI Wilayah KAJ siap membantu Anda terkait pendaftaran anggota, kerjasama baksos kesehatan paroki, maupun pendaftaran Simposium Ilmiah CCPG 2026.
+            </p>
+
+            <div class="mt-6 space-y-3">
+              <a 
+                href="https://wa.me/6282111013865?text=Halo%20Sekretariat%20KMKI%20Wilayah%20KAJ,%20saya%20ingin%20bertanya%20seputar%20keanggotaan%20KMKI%20KAJ" 
+                target="_blank" 
+                rel="noopener"
+                class="flex items-center justify-between p-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 transition text-sm font-semibold"
+              >
+                <span>Pertanyaan Keanggotaan KAJ</span>
+                <span>&rarr;</span>
+              </a>
+
+              <a 
+                href="https://wa.me/6282111013865?text=Halo%20Sekretariat%20KMKI%20Wilayah%20KAJ,%20kami%20ingin%20mengajukan%20seminar%20kesehatan%20paroki" 
+                target="_blank" 
+                rel="noopener"
+                class="flex items-center justify-between p-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 transition text-sm font-semibold"
+              >
+                <span>Permohonan Seminar Kesehatan Paroki</span>
+                <span>&rarr;</span>
+              </a>
+
+              <a 
+                href="/ccpg2026" 
+                class="flex items-center justify-between p-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 transition text-sm font-bold shadow-md"
+              >
+                <span>Informasi Simposium CCPG 2026</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-white/20 text-xs text-sky-200">
+            <span>© KMKI Wilayah Keuskupan Agung Jakarta</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</KAJLayout>

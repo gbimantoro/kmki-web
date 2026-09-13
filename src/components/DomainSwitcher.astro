@@ -1,9 +1,14 @@
 ---
 interface Props {
-  currentHighlight: 'main' | 'ccpg2026';
+  currentHighlight: 'main' | 'kaj' | 'ccpg2026';
 }
 
 const { currentHighlight } = Astro.props;
+
+const isLocalOrPreview = Astro.url.hostname.includes('localhost') || Astro.url.hostname.includes('pages.dev');
+const mainUrl = isLocalOrPreview ? '/' : 'https://kmki.or.id/';
+const kajUrl = isLocalOrPreview ? '/kaj' : 'https://kaj.kmki.or.id/';
+const ccpgUrl = isLocalOrPreview ? '/ccpg2026' : 'https://ccpg2026.kmki.or.id/';
 ---
 
 <div class="bg-gradient-to-r from-slate-900 via-sky-950 to-slate-900 text-white text-xs border-b border-sky-800/40 py-1.5 px-3 relative z-50">
@@ -19,11 +24,11 @@ const { currentHighlight } = Astro.props;
       </span>
     </div>
 
-    <!-- Center/Right: Switcher with 🎓 CCPG 2026 -->
+    <!-- Center/Right: Switcher with 🎓 CCPG 2026 & Wilayah KAJ -->
     <div class="flex items-center gap-1 bg-slate-800/90 p-0.5 rounded-lg border border-slate-700">
       <!-- Main Org Switch -->
       <a 
-        href="https://kmki.or.id/" 
+        href={mainUrl} 
         class={`flex items-center gap-1.5 px-3 py-1 rounded-md transition text-xs font-semibold ${
           currentHighlight === 'main'
             ? 'bg-sky-600 text-white shadow-xs'
@@ -34,9 +39,22 @@ const { currentHighlight } = Astro.props;
         <span>kmki.or.id</span>
       </a>
 
+      <!-- KMKI KAJ Subdomain Switch -->
+      <a 
+        href={kajUrl} 
+        class={`flex items-center gap-1.5 px-3 py-1 rounded-md transition text-xs font-bold ${
+          currentHighlight === 'kaj'
+            ? 'bg-sky-500 text-white shadow-xs'
+            : 'text-sky-300 hover:text-white hover:bg-slate-700/50'
+        }`}
+        title="Portal Resmi KMKI Wilayah Keuskupan Agung Jakarta (kaj.kmki.or.id)"
+      >
+        <span>kaj.kmki.or.id</span>
+      </a>
+
       <!-- Event Landing Page Switch with 🎓 icon -->
       <a 
-        href="/ccpg2026" 
+        href={ccpgUrl} 
         class={`flex items-center gap-1.5 px-3 py-1 rounded-md transition text-xs font-bold ${
           currentHighlight === 'ccpg2026'
             ? 'bg-amber-400 text-slate-950 shadow-xs'

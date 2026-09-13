@@ -46,6 +46,12 @@ export async function onRequest(context: { request: Request; next: () => Promise
   if (isCCPGSubdomain && (url.pathname === '/' || url.pathname === '')) {
     return Response.redirect(`${url.origin}/ccpg2026/`, 302);
   }
+
+  // If request is to kaj subdomain and at root, redirect to /kaj/
+  const isKAJSubdomain = url.hostname.startsWith('kaj');
+  if (isKAJSubdomain && (url.pathname === '/' || url.pathname === '')) {
+    return Response.redirect(`${url.origin}/kaj/`, 302);
+  }
   return context.next();
 }
 
