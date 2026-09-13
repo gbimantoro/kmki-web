@@ -1,10 +1,10 @@
 ---
-import EventLayout from '../layouts/EventLayout.astro';
-import CCPGNavbar from '../components/CCPGNavbar.astro';
-import CCPGSchedule from '../components/CCPGSchedule.astro';
-import CCPGSpeakers from '../components/CCPGSpeakers.astro';
-import CCPGRegistrationModal from '../components/CCPGRegistrationModal.astro';
-import Medical3DVector from '../components/Medical3DVector.astro';
+import EventLayout from '../../layouts/EventLayout.astro';
+import CCPGNavbar from '../../components/CCPGNavbar.astro';
+import CCPGSchedule from '../../components/CCPGSchedule.astro';
+import CCPGSpeakers from '../../components/CCPGSpeakers.astro';
+import CCPGRegistrationModal from '../../components/CCPGRegistrationModal.astro';
+import Medical3DVector from '../../components/Medical3DVector.astro';
 ---
 
 <EventLayout
@@ -13,6 +13,41 @@ import Medical3DVector from '../components/Medical3DVector.astro';
 >
 
   <CCPGNavbar />
+
+  <!-- TOP ANNOUNCEMENT BAR: Call for Paper / Abstract -->
+  <div class="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-slate-950 px-4 py-2.5 shadow-lg relative z-30 border-b border-amber-600">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs">
+      <div class="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
+        <span class="px-2.5 py-0.5 rounded-full bg-slate-950 text-amber-300 font-black text-[10px] uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>
+          CALL FOR ABSTRACT / PAPER
+        </span>
+        <span class="font-black text-slate-950">
+          Deadline: 30 Oktober 2026
+        </span>
+        <span class="hidden md:inline text-slate-950/50">•</span>
+        <span class="hidden md:inline font-medium text-slate-900">
+          Berbagi hasil penelitian & pengalaman klinis (Oral / E-Poster)
+        </span>
+      </div>
+      <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+        <a 
+          href="https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20saya%20ingin%20bertanya%20mengenai%20Call%20for%20Abstract%20CCPG%202026" 
+          target="_blank" 
+          rel="noopener"
+          class="font-bold text-slate-950 hover:text-slate-800 transition flex items-center gap-1 bg-white/40 hover:bg-white/60 px-2.5 py-1 rounded-lg"
+        >
+          <span>WA: dr. Danny Radja</span>
+        </a>
+        <a 
+          href="/ccpg2026/call-for-abstract" 
+          class="px-3 py-1 rounded-lg bg-slate-950 hover:bg-slate-900 text-amber-300 font-black transition flex items-center gap-1 shadow-sm"
+        >
+          <span>Panduan Lengkap &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- HERO SECTION: High-Tech Vibrant Medical & Catholic Event -->
   <section class="relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
@@ -119,13 +154,22 @@ import Medical3DVector from '../components/Medical3DVector.astro';
           </div>
 
           <!-- Action Buttons -->
-          <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+          <div class="flex flex-col sm:flex-row items-center gap-4 pt-2 flex-wrap">
             <a 
               href="#daftar" 
               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-black text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-300 hover:to-yellow-400 shadow-xl shadow-amber-500/20 hover:shadow-amber-500/30 transition transform hover:-translate-y-0.5"
             >
               <svg class="w-5 h-5 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
               <span>Daftar Simposium Sekarang</span>
+            </a>
+
+            <a 
+              href="/ccpg2026/call-for-abstract" 
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-bold text-amber-300 bg-amber-400/15 hover:bg-amber-400/25 border border-amber-400/40 transition shadow-lg"
+            >
+              <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>Call for Paper</span>
+              <span class="text-[10px] bg-amber-400 text-slate-950 px-1.5 py-0.5 rounded font-black">Batas 30 Okt</span>
             </a>
 
             <a 
@@ -242,7 +286,7 @@ import Medical3DVector from '../components/Medical3DVector.astro';
         </div>
 
         <!-- Right: Validation QR Box (From PDF) -->
-        <div class="lg:col-span-4 flex flex-col items-center justify-center p-6 rounded-3xl bg-slate-900 border border-slate-800 text-center">
+        <div class="lg:col-span-4 flex flex-col items-center justify-center p-6 rounded-3xl bg-slate-900 border border-slate-800 text-center shadow-lg">
           <span class="text-xs font-bold text-amber-300 uppercase tracking-wider block mb-3">Validasi di Sini:</span>
           <img 
             src="/images/assets_extracted/clean/qr-code-1.png" 
@@ -251,6 +295,144 @@ import Medical3DVector from '../components/Medical3DVector.astro';
           />
           <span class="text-xs font-bold text-white mt-3 block">Sasaran Peserta & Nilai SKP</span>
           <span class="text-[11px] text-slate-400 mt-0.5">Scan QR untuk verifikasi Plataran Sehat</span>
+
+          <!-- Shortcut LMS Plataran Sehat -->
+          <div class="mt-4 pt-3 border-t border-slate-800 flex flex-col items-center gap-1.5 w-full">
+            <span class="text-[10px] text-slate-400">Shortcut URL Resmi Plataran Sehat:</span>
+            <a 
+              href="/lms" 
+              target="_blank" 
+              rel="noopener"
+              class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 text-xs font-bold border border-sky-400/40 transition shadow-sm"
+              title="Akses Langsung Kursus Plataran Sehat Kemenkes RI"
+            >
+              <span>ccpg2026.kmki.or.id/lms</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- HIGHLIGHT KHUSUS: CALL FOR ABSTRACT / CALL FOR PAPER SECTION -->
+  <section id="call-for-paper" class="py-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-b border-slate-800 relative overflow-hidden">
+    <!-- Glowing accents -->
+    <div class="vibrant-glow-amber w-96 h-96 -top-10 -left-10 opacity-30"></div>
+    <div class="vibrant-glow-blue w-96 h-96 -bottom-10 -right-10 opacity-30"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header Box -->
+      <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-amber-500/15 via-slate-900 to-sky-950/60 border-2 border-amber-400/40 shadow-2xl">
+        
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-slate-800">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-400 text-slate-950 uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-slate-950 animate-ping"></span>
+                CALL FOR PAPER & ABSTRACT
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-500/20 text-rose-300 border border-rose-400/40">
+                Deadline: 30 Oktober 2026
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                Oral Presentation & E-Poster
+              </span>
+            </div>
+
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight font-heading">
+              Call for Abstract — Current Clinical Practice Guideline 2026
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 mt-2 max-w-3xl leading-relaxed">
+              Kesempatan bagi <strong>Dokter, Dokter Spesialis, PPDS, Dokter Umum,</strong> dan <strong>Tenaga Kesehatan</strong> untuk berbagi hasil penelitian dan pengalaman klinis dalam simposium terakreditasi Kemenkes RI.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
+            <a 
+              href="/ccpg2026/call-for-abstract" 
+              class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-sm text-center shadow-lg transition transform hover:-translate-y-0.5"
+            >
+              Info & Panduan Lengkap &rarr;
+            </a>
+            <a 
+              href="https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20saya%20ingin%20bertanya%20mengenai%20Call%20for%20Abstract%20CCPG%202026" 
+              target="_blank" 
+              rel="noopener"
+              class="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs text-center shadow-md transition flex items-center justify-center gap-2"
+            >
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.203c.044.072.044.419-.1.824z"/></svg>
+              <span>Hubungi dr. Danny Radja</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3 Feature Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+          
+          <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800">
+            <span class="text-[11px] font-bold text-amber-300 uppercase tracking-wider block mb-1">3 Kategori Abstrak</span>
+            <h4 class="text-base font-bold text-white mb-2">Original Research, Case Report, & EBCR</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Menerima penelitian klinis primer, laporan kasus langka/unik, serta Evidence-Based Case Report (EBCR) terapan.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800">
+            <span class="text-[11px] font-bold text-sky-300 uppercase tracking-wider block mb-1">Ketentuan & Format</span>
+            <h4 class="text-base font-bold text-white mb-2">Maks. 300 Kata • MS Word</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Bahasa Indonesia atau Inggris, maksimal 5 keywords, nama tanpa gelar, wajib mencantumkan institusi dan kota.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800">
+            <span class="text-[11px] font-bold text-emerald-300 uppercase tracking-wider block mb-1">Alur Pengiriman</span>
+            <h4 class="text-base font-bold text-white mb-2">Email: Nanny.djaja@atmajaya.ac.id</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Subject: <strong class="text-slate-200">ABSTRACT – CPG 2026 – [Nama Penulis]</strong>. Batas akhir penerimaan 30 Oktober 2026.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Contact Highlight Box -->
+        <div class="mt-6 p-4 rounded-2xl bg-slate-900/70 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-base border border-emerald-500/30 shrink-0">
+              💬
+            </div>
+            <div>
+              <p class="text-xs text-slate-300">
+                Pertanyaan teknis Call for Abstract? Hubungi narahubung panitia:
+              </p>
+              <p class="text-xs font-bold text-white">
+                dr. Danny Radja, SpKKLP, B.Math <span class="text-emerald-400 font-mono font-normal ml-1">+62 821-1101-3865</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 shrink-0">
+            <a 
+              href="https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20saya%20ingin%20bertanya%20mengenai%20Call%20for%20Abstract%20CCPG%202026" 
+              target="_blank" 
+              rel="noopener"
+              class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition inline-flex items-center gap-1.5"
+            >
+              <span>Chat WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a 
+              href="/ccpg2026/call-for-abstract" 
+              class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition"
+            >
+              Buka Halaman Lengkap
+            </a>
+          </div>
         </div>
 
       </div>
