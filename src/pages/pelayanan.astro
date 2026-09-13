@@ -1,0 +1,89 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Medical3DVector from '../components/Medical3DVector.astro';
+---
+
+<MainLayout 
+  title="Pilar Pelayanan & Program Kerja - KMKI Indonesia"
+  description="Kiprah nyata pelayanan KMKI: Continuing Medical Education (CME), simposium klinis CCPG, kajian bioetika, bakti sosial pengobatan gratis, dan pendampingan pastoral tenaga medis."
+>
+  <section class="py-16 bg-gradient-to-br from-sky-900 via-slate-900 to-sky-950 text-white text-center relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <span class="px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 text-xs font-bold uppercase tracking-wider border border-sky-400/30">
+        Aksi Nyata & Dedikasi
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+        Pilar Pelayanan & Program Kerja
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mt-3">
+        Menghidupi iman melalui pengabdian medis di bidang pendidikan kedokteran, bioetika, sosial kemanusiaan, dan pastoral rohani.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Pilar 1 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="p-8 rounded-3xl bg-gradient-to-br from-sky-50 to-blue-100 border border-sky-200 flex flex-col items-center text-center">
+            <Medical3DVector name="microscope" size={72} />
+            <h3 class="text-xl font-bold text-slate-900 mt-4">Simposium & CME Berkelanjutan</h3>
+            <p class="text-xs text-slate-600 mt-2">Terakreditasi Kemenkes RI dengan bobot SKP resmi melalui Satu Sehat Plataran Sehat.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-4">
+          <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Pilar I</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Pendidikan Kedokteran Berkelanjutan (CME)</h2>
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+            Melalui program unggulan tahunan <strong>Current Clinical Practice Guidelines (CCPG)</strong> yang kini memasuki edisi ke-9 pada tahun 2026, KMKI bekerja sama dengan institusi terkemuka seperti Badiklat FKIK Unika Atma Jaya menyelenggarakan simposium ilmiah offline dan online.
+          </p>
+          <div class="pt-2">
+            <a href="/ccpg2026" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs shadow transition">
+              <span>Buka Informasi Simposium CCPG 2026</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pilar 2 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-slate-100 pt-16">
+        <div class="lg:col-span-7 space-y-4">
+          <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Pilar II</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Kajian Bioetika & Moralitas Kedokteran</h2>
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+            Dunia medis masa kini menghadapi tantangan moral yang kompleks seiring kemajuan rekayasa genetika, artificial intelligence, dan teknologi reproduksi. KMKI secara konsisten menyelenggarakan seminar moral kedokteran, menerbitkan panduan etis mengenai perawatan akhir hayat (palliative care), penolakan eutanasia, dan metode keluarga berencana berbasis kesadaran kesuburan (FABMs).
+          </p>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="p-8 rounded-3xl bg-gradient-to-br from-emerald-50 to-teal-100 border border-emerald-200 flex flex-col items-center text-center">
+            <Medical3DVector name="shield-check" size={72} />
+            <h3 class="text-xl font-bold text-slate-900 mt-4">Integritas Bioetika Katolik</h3>
+            <p class="text-xs text-slate-600 mt-2">Menjaga keluhuran martabat setiap nyawa manusia di setiap fase kehidupan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pilar 3 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-slate-100 pt-16">
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="p-8 rounded-3xl bg-gradient-to-br from-amber-50 to-orange-100 border border-amber-200 flex flex-col items-center text-center">
+            <Medical3DVector name="hospital" size={72} />
+            <h3 class="text-xl font-bold text-slate-900 mt-4">Bakti Sosial & Bencana Alam</h3>
+            <p class="text-xs text-slate-600 mt-2">Pelayanan medis sukarela di stasi terpencil dan daerah tanggap darurat.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-4">
+          <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Pilar III</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Karya Karitatif & Bantuan Kemanusiaan</h2>
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+            Dokter dan paramedis KMKI secara rutin terjun ke wilayah pelosok kepulauan Indonesia (seperti pedalaman Mentawai, Papua, NTT, dan Kalimantan) untuk memberikan pengobatan cuma-cuma, skrining stunting anak, dan operasi katarak/bibir sumbing. KMKI juga menggerakkan dokter relawan saat terjadi gempa bumi, banjir bandang, dan letusan gunung berapi.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</MainLayout>

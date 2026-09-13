@@ -1,0 +1,122 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Medical3DVector from '../components/Medical3DVector.astro';
+---
+
+<MainLayout 
+  title="Tentang KMKI - Sejarah, Visi, Misi & Pengurus | Komunitas Medik Katolik Indonesia"
+  description="Sejarah berdirinya KMKI pada 11 Februari 2001, visi misi, komitmen bioetika kedokteran Katolik, dan struktur pelayanan di 20 keuskupan se-Indonesia."
+>
+  <!-- Header Banner -->
+  <section class="relative py-16 bg-gradient-to-br from-sky-900 via-slate-900 to-sky-950 text-white overflow-hidden">
+    <div class="vibrant-glow-blue w-96 h-96 -top-10 -left-10 opacity-30"></div>
+    <div class="vibrant-glow-amber w-96 h-96 bottom-0 right-0 opacity-20"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 text-xs font-bold uppercase tracking-wider border border-sky-400/30">
+        Profil Organisasi
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+        Mengenal Komunitas Medik Katolik Indonesia
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mt-3">
+        Dua puluh lima tahun merajut iman dan ilmu kedokteran untuk memulihkan sesama dengan cinta kasih Kristiani.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Sejarah Singkat -->
+      <div class="mb-16">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center shrink-0">
+            <Medical3DVector name="cross-asclepius" size={40} />
+          </div>
+          <div>
+            <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Perjalanan Bersejarah</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Sejarah Pendirian KMKI</h2>
+          </div>
+        </div>
+
+        <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4 text-base">
+          <p>
+            Komunitas Medik Katolik Indonesia (KMKI) resmi didirikan pada <strong>11 Februari 2001</strong>, bertepatan dengan peringatan <em>Hari Orang Sakit Sedunia</em> yang dicanangkan oleh Santo Paus Yohanes Paulus II. Pendirian organisasi ini berawal dari kerinduan mendalam para dokter, dokter spesialis, dan rohaniwan Katolik di Indonesia untuk memiliki sebuah wadah persekutuan iman, refleksi etis, dan karya nyata di bidang kesehatan.
+          </p>
+          <p>
+            Dalam perkembangannya, KMKI bertumbuh pesat dan kini telah memiliki perwakilan di <strong>20 wilayah Keuskupan</strong> di seluruh Indonesia, bekerja sama erat dengan <strong>Komisi Kesehatan Konferensi Waligereja Indonesia (KWI)</strong>, rumah sakit Katolik (seperti RS St. Carolus, RS Sint Carolus Borromeus, RS Vincentius a Paulo), serta institusi pendidikan kedokteran seperti FKIK Universitas Katolik Indonesia Atma Jaya.
+          </p>
+        </div>
+
+        <!-- Official Assets Showcase -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col items-center text-center">
+            <img src="/images/logo.jpg" alt="Logo Resmi KMKI" class="w-36 h-36 rounded-full shadow-lg border-4 border-white mb-4 bg-white" />
+            <h3 class="font-bold text-slate-900 text-sm">Makna Lambang KMKI</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Salib Kristus emas diapit ular Asclepius kedokteran dengan latar bola dunia dan peta kepulauan Indonesia, mencerminkan komitmen pelayanan medis yang berakar pada kasih Kristus bagi seluruh tumpah darah Indonesia.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col items-center text-center">
+            <img src="/images/header.jpg" alt="KMKI Header" class="w-full h-36 object-cover rounded-xl shadow-md border-2 border-white mb-4" />
+            <h3 class="font-bold text-slate-900 text-sm">Sinergi Iman & Teknologi Medis</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Doa rosario dan spiritualitas mendasari kecanggihan teknologi kesehatan, kedokteran presisi, dan kecerdasan buatan dalam menyelamatkan nyawa manusia.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visi & Misi Rinci -->
+      <div class="mb-16 pt-12 border-t border-slate-200">
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mb-8 text-center">
+          Visi, Misi & Komitmen Pokok
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="glass-panel p-8 rounded-2xl border-l-4 border-sky-600 bg-sky-50/40">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-sm">V</span>
+              <h3 class="text-xl font-bold text-slate-900">Visi Organisasi</h3>
+            </div>
+            <p class="text-sm text-slate-700 leading-relaxed font-medium">
+              "Menjadi komunitas medik Katolik yang unggul, tangguh, dan berakar kuat dalam iman Kristiani, serta terdepan dalam pelayanan kesehatan yang berkeadilan, bermartabat, dan penuh belarasa bagi seluruh masyarakat Indonesia."
+            </p>
+          </div>
+
+          <div class="glass-panel p-8 rounded-2xl border-l-4 border-amber-500 bg-amber-50/40">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center font-bold text-sm">M</span>
+              <h3 class="text-xl font-bold text-slate-900">Misi Organisasi</h3>
+            </div>
+            <ol class="text-sm text-slate-700 leading-relaxed space-y-2.5 list-decimal list-inside">
+              <li>Membina dan menumbuhkan spiritualitas tenaga medis Katolik dalam panggilan hidup pelayanannya.</li>
+              <li>Meningkatkan kompetensi profesionalisme kedokteran berkelanjutan melalui riset, CME, dan EBM.</li>
+              <li>Mengawal dan menyuarakan prinsip bioetika Katolik di tengah kemajuan pesat bioteknologi dan AI.</li>
+              <li>Melaksanakan aksi kemanusiaan dan bakti kesehatan bagi kaum papa, miskin, dan terdampak bencana.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bioetika Kedokteran Katolik -->
+      <div class="p-8 rounded-3xl bg-gradient-to-r from-slate-900 to-sky-950 text-white shadow-xl relative overflow-hidden">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="w-16 h-16 rounded-2xl bg-sky-500/20 border border-sky-400/40 flex items-center justify-center shrink-0">
+            <Medical3DVector name="shield-check" size={48} />
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-1">Pedoman Moral & Bioetika Katolik</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              KMKI memegang teguh martabat kehidupan manusia sejak konsepsi pembuahan hingga kematian alamiah (*from conception to natural death*). Kami mengkaji isu kontemporer seperti etika kecerdasan buatan klinis, transplantasi organ, perawatan paliatif, dan metode kesadaran fertilitas alami (FABMs).
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</MainLayout>

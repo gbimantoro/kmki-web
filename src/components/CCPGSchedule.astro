@@ -1,0 +1,388 @@
+---
+import Medical3DVector from './Medical3DVector.astro';
+---
+
+<div class="space-y-8" id="jadwal-container">
+  
+  <!-- Interactive Day Selector & Search Filter -->
+  <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-800/80 p-3 rounded-2xl border border-slate-700">
+    <div class="flex items-center gap-2 w-full sm:w-auto">
+      <button 
+        type="button" 
+        data-day-tab="day1"
+        class="day-btn flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 bg-gradient-to-r from-sky-600 to-sky-700 text-white shadow-md active-tab"
+      >
+        <span class="w-2 h-2 rounded-full bg-sky-300"></span>
+        <span>Hari 1 (Sabtu, 7 Nov)</span>
+      </button>
+
+      <button 
+        type="button" 
+        data-day-tab="day2"
+        class="day-btn flex-1 sm:flex-none px-6 py-3 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2 text-slate-300 hover:text-white hover:bg-slate-700/60"
+      >
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <span>Hari 2 (Minggu, 8 Nov)</span>
+      </button>
+    </div>
+
+    <!-- Search / Filter Input -->
+    <div class="relative w-full sm:w-72">
+      <input 
+        type="text" 
+        id="schedule-search" 
+        placeholder="Cari pembicara / topik..." 
+        class="w-full pl-9 pr-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-400"
+      />
+      <svg class="w-4 h-4 text-slate-500 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- DAY 1 CONTENT -->
+  <div id="day1-content" class="day-content space-y-6">
+    <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+      <div>
+        <h3 class="text-xl font-black text-white font-heading">Jadwal Ilmiah Hari Pertama</h3>
+        <p class="text-xs text-sky-300">Sabtu, 7 November 2026 • 07.00 - 16.00 WIB • Auditorium Stella Maris RS Carolus</p>
+      </div>
+      <span class="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 hidden sm:inline-block">
+        2 Plenary + 4 Sesi + Lunch Simposium I
+      </span>
+    </div>
+
+    <!-- Plenary 1 & 2 -->
+    <div class="schedule-item glass-panel-dark p-6 rounded-2xl border-l-4 border-l-amber-400 space-y-4">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-amber-400 text-slate-950 uppercase tracking-wide">
+          Plenary Lecture I & II
+        </span>
+        <span class="text-xs text-slate-400 font-mono">08.00 - 09.30 WIB</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-[10px] text-amber-300 font-bold uppercase block mb-1">Plenary Lecture I</span>
+          <h4 class="text-base font-bold text-white">dr. Gregorius Bimantoro</h4>
+          <p class="text-xs text-sky-200 mt-1 font-medium">
+            "Clinical Decision Making di Era Artificial Intelligence: Penerapan Evidence-Based Medicine, Clinical Practice Guidelines, dan AI secara Bertanggung Jawab"
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-[10px] text-amber-300 font-bold uppercase block mb-1">Plenary Lecture II</span>
+          <h4 class="text-base font-bold text-white">dr. Timothy John Jusuf</h4>
+          <p class="text-xs text-sky-200 mt-1 font-medium">
+            "Profesionalisme Dokter di Era Digital: Etika, Komunikasi Klinis, dan Tata Kelola Teknologi dalam Praktik Kedokteran"
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sesi 1: Obesitas -->
+    <div class="schedule-item glass-panel-dark p-6 rounded-2xl border-l-4 border-l-sky-500 space-y-4">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-sky-500 text-white uppercase tracking-wide">
+          Sesi I : Tata Laksana Obesitas
+        </span>
+        <span class="text-xs text-slate-400 font-mono">09.45 - 11.15 WIB</span>
+      </div>
+      <h4 class="text-lg font-bold text-white">
+        Clinical Decision Making pada Tata Laksana Obesitas Berdasarkan Current Clinical Practice Guidelines
+      </h4>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-sky-300">Dr. dr. Nanny Djaya, Sp. GK</span>
+          <p class="text-xs text-slate-300 mt-1">Tata Laksana Gizi pada Obesitas Berdasarkan Current Clinical Practice Guidelines</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-sky-300">Dr. dr. Ignatio Rika Haryono, Sp.KO., Subsp.ALK(K)</span>
+          <p class="text-xs text-slate-300 mt-1">Exercise Prescription pada Tata Laksana Obesitas Berbasis Evidence</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-sky-300">Dr. dr. Laurentius Aswin Pramono, M.Epid, M.Pd.Ked, Sp.PD-KEMD</span>
+          <p class="text-xs text-slate-300 mt-1">Clinical Decision Making pada Individualisasi Tata Laksana Obesitas melalui Precision Medicine</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sesi 2: Kesehatan Anak -->
+    <div class="schedule-item glass-panel-dark p-6 rounded-2xl border-l-4 border-l-emerald-500 space-y-4">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-emerald-500 text-slate-950 uppercase tracking-wide">
+          Sesi II : Pelayanan Kesehatan Anak
+        </span>
+        <span class="text-xs text-slate-400 font-mono">11.15 - 12.30 WIB</span>
+      </div>
+      <h4 class="text-lg font-bold text-white">
+        Current Clinical Practice Guidelines pada Pelayanan Kesehatan Anak
+      </h4>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-emerald-300">dr. Jeanne Laurensie Sihombing, Sp.A</span>
+          <p class="text-xs text-slate-300 mt-1">Clinical Decision Making pada Imunisasi Anak Berdasarkan Current Clinical Practice Guidelines</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-emerald-300">dr. Ria Yoanita, Sp.A, CIMI, CBS</span>
+          <p class="text-xs text-slate-300 mt-1">Skrining Tumbuh Kembang Berdasarkan Clinical Practice Guidelines</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-emerald-300">Dr. dr. Fransisca Handy Agung, Sp.A, IBCLC</span>
+          <p class="text-xs text-slate-300 mt-1">Tatalaksana Obesitas pada anak berbasis bukti</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lunch Simposium I -->
+    <div class="schedule-item p-6 rounded-2xl bg-gradient-to-r from-amber-950/60 via-slate-800 to-slate-800 border-2 border-amber-500/40 space-y-3">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-3 py-1 rounded text-xs font-black bg-amber-400 text-slate-950 uppercase tracking-wide">
+          Lunch Simposium I
+        </span>
+        <span class="text-xs text-amber-300 font-mono font-bold">12.30 - 13.30 WIB</span>
+      </div>
+      <div>
+        <span class="text-xs text-amber-200 block font-bold">Dr. dr. Laurentius Aswin Pramono, M.Epid, M.Pd.Ked, Sp.PD-KEMD</span>
+        <h4 class="text-lg font-bold text-white mt-1">
+          "Clinical Decision Making pada Individualisasi Terapi Diabetes Mellitus"
+        </h4>
+        <p class="text-xs text-slate-300 mt-1">Pendekatan precision medicine dan guideline terkini dalam pemilihan terapi oral & injeksi pada DM tipe 2.</p>
+      </div>
+    </div>
+
+    <!-- Sesi 3: Kardiometabolik -->
+    <div class="schedule-item glass-panel-dark p-6 rounded-2xl border-l-4 border-l-rose-500 space-y-4">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-rose-500 text-white uppercase tracking-wide">
+          Sesi III : Penyakit Kardiometabolik
+        </span>
+        <span class="text-xs text-slate-400 font-mono">13.30 - 14.45 WIB</span>
+      </div>
+      <h4 class="text-lg font-bold text-white">
+        Implementasi Current Clinical Practice Guidelines pada Tata Laksana Penyakit Kardiometabolik
+      </h4>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-rose-300">dr. Hardjo Prawira, Sp.PD, KKV, FINASIM, FICA</span>
+          <p class="text-xs text-slate-300 mt-1">Clinical Decision Making pada Tata Laksana Hipertensi Berdasarkan Current Clinical Practice Guidelines</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-rose-300">dr. Maria Riastuti Iryaningrum, Sp.PD-KGH, FINASIM</span>
+          <p class="text-xs text-slate-300 mt-1">Implementasi Current Clinical Practice Guidelines pada Tata Laksana Dislipidemia</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-rose-300">dr. Rachmat Hamonangan, Sp.PD-KKV</span>
+          <p class="text-xs text-slate-300 mt-1">Clinical Decision Making pada Penyakit Jantung di Layanan Primer Berdasarkan Current Clinical Practice Guidelines</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sesi 4: Imunisasi Dewasa, Alergi & Autoimun -->
+    <div class="schedule-item glass-panel-dark p-6 rounded-2xl border-l-4 border-l-indigo-500 space-y-4">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-indigo-500 text-white uppercase tracking-wide">
+          Sesi IV : Imunisasi Dewasa, Alergi & Autoimun
+        </span>
+        <span class="text-xs text-slate-400 font-mono">14.45 - 16.00 WIB</span>
+      </div>
+      <h4 class="text-lg font-bold text-white">
+        Pendekatan Terpadu pada Imunisasi Dewasa, Penyakit Alergi, dan Autoimun
+      </h4>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-indigo-300">Dr. dr. Stevent Sumantri, SpPD, K-AI, DAA, FINASIM</span>
+          <p class="text-xs text-slate-300 mt-1">Strategi Imunisasi Lansia Berbasis Risiko dalam Praktik Klinis</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-indigo-300">dr. Yunita Maslim, Sp.PD, K-AI, FINASIM</span>
+          <p class="text-xs text-slate-300 mt-1">Pendekatan Klinis pada Penyakit Alergi di praktik sehari-hari</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-indigo-300">dr. Cindy, M.Biomed, Sp.PD-KR</span>
+          <p class="text-xs text-slate-300 mt-1">Implementasi Precision Medicine dan Clinical Practice Guidelines pada Deteksi Dini Penyakit Autoimun</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- DAY 2 CONTENT -->
+  <div id="day2-content" class="day-content space-y-6 hidden">
+    <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+      <div>
+        <h3 class="text-xl font-black text-white font-heading">Jadwal Ilmiah Hari Kedua</h3>
+        <p class="text-xs text-amber-300">Minggu, 8 November 2026 • 07.00 - 16.00 WIB • Auditorium Stella Maris RS Carolus</p>
+      </div>
+      <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-400/30 hidden sm:inline-block">
+        1 Plenary + 3 Sesi + Lunch Simposium II
+      </span>
+    </div>
+
+    <!-- Plenary 3 -->
+    <div class="schedule-item glass-panel-dark p-6 rounded-2xl border-l-4 border-l-amber-400 space-y-3">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-amber-400 text-slate-950 uppercase tracking-wide">
+          Plenary Lecture III
+        </span>
+        <span class="text-xs text-slate-400 font-mono">08.00 - 09.00 WIB</span>
+      </div>
+      <div>
+        <span class="text-sm font-bold text-amber-300 block">Dr. dr. Yudy, Sp.FM</span>
+        <h4 class="text-lg font-bold text-white mt-1">
+          "Profesionalisme Dokter di Era Digital: Etika Praktik, Tata Kelola Teknologi Kesehatan, dan Artificial Intelligence"
+        </h4>
+        <p class="text-xs text-slate-300 mt-1">Tinjauan medikolegal, bioetika, dan pertanggungjawaban hukum penggunaan AI klinis di Indonesia.</p>
+      </div>
+    </div>
+
+    <!-- Sesi 5: Kesehatan Wanita & Reproduksi -->
+    <div class="schedule-item glass-panel-dark p-6 rounded-2xl border-l-4 border-l-pink-500 space-y-4">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-pink-500 text-white uppercase tracking-wide">
+          Sesi V : Kesehatan Wanita & Reproduksi
+        </span>
+        <span class="text-xs text-slate-400 font-mono">09.15 - 11.00 WIB</span>
+      </div>
+      <h4 class="text-lg font-bold text-white">
+        Manajemen Komprehensif Kesehatan Wanita dan Reproduksi
+      </h4>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-pink-300">dr. Dyana Safitri Velies, Sp.OG (K)-Obginsos, M.Kes</span>
+          <p class="text-xs text-slate-300 mt-1">Pendekatan Klinis pada Kehamilan Remaja</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-pink-300">dr. Caecilia Hendriani, M.Kes</span>
+          <p class="text-xs text-slate-300 mt-1">Evidence-Based Clinical Decision Making dalam Pemilihan Metode Kontrasepsi, termasuk Fertility Awareness-Based Methods (FABMs)</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-pink-300">dr. Galuh Chandra Kirana S, SpPD, K.H.Onk.M, FINASIM</span>
+          <p class="text-xs text-slate-300 mt-1">Pendekatan Klinis pada Skrining Kanker Wanita Berbasis Risiko</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sesi 6: Neuropsikiatri & Nyeri Kronis -->
+    <div class="schedule-item glass-panel-dark p-6 rounded-2xl border-l-4 border-l-purple-500 space-y-4">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-purple-500 text-white uppercase tracking-wide">
+          Sesi VI : Neuropsikiatri & Nyeri Kronis
+        </span>
+        <span class="text-xs text-slate-400 font-mono">11.00 - 12.30 WIB</span>
+      </div>
+      <h4 class="text-lg font-bold text-white">
+        Evidence-Based Clinical Decision Making pada Gangguan Neuropsikiatri dan Nyeri Kronis
+      </h4>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-purple-300">dr. Eva Suryani, Sp.KJ</span>
+          <p class="text-xs text-slate-300 mt-1">Clinical Decision Making pada Depresi dan Gangguan Ansietas</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-purple-300">Dr. dr. Rimawati Tedjasukmana, SpS, Subsp E.N.K(K), RPSGT</span>
+          <p class="text-xs text-slate-300 mt-1">Pendekatan Klinis pada Gangguan Tidur</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-purple-300">Dr. dr. Jimmy Fransisco Abadinta Barus, M.Sc., Sp.N</span>
+          <p class="text-xs text-slate-300 mt-1">Pendekatan Multimodal pada Tata Laksana Nyeri Kronis NonKanker Berdasarkan Current Clinical Practice Guidelines</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lunch Simposium II -->
+    <div class="schedule-item p-6 rounded-2xl bg-gradient-to-r from-amber-950/60 via-slate-800 to-slate-800 border-2 border-amber-500/40 space-y-3">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-3 py-1 rounded text-xs font-black bg-amber-400 text-slate-950 uppercase tracking-wide">
+          Lunch Simposium II
+        </span>
+        <span class="text-xs text-amber-300 font-mono font-bold">12.30 - 13.30 WIB</span>
+      </div>
+      <div>
+        <span class="text-xs text-amber-200 block font-bold">dr. Riki Tenggara, Sp.PD-KGEH, M.Kes, FINASIM</span>
+        <h4 class="text-lg font-bold text-white mt-1">
+          "Pendekatan Klinis pada Diagnosis dan Tata Laksana GERD"
+        </h4>
+        <p class="text-xs text-slate-300 mt-1">Strategi tata laksana refluks gastroesofageal terkini dan evaluasi resistensi terapi.</p>
+      </div>
+    </div>
+
+    <!-- Sesi 7: Pelayanan Geriatri & Healthy Aging -->
+    <div class="schedule-item glass-panel-dark p-6 rounded-2xl border-l-4 border-l-teal-500 space-y-4">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <span class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-teal-500 text-slate-950 uppercase tracking-wide">
+          Sesi VII : Pelayanan Geriatri Komprehensif
+        </span>
+        <span class="text-xs text-slate-400 font-mono">13.30 - 15.30 WIB</span>
+      </div>
+      <h4 class="text-lg font-bold text-white">
+        Pelayanan Geriatri Komprehensif: Clinical Decision Making untuk Healthy Aging
+      </h4>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-teal-300">dr. Rensa, Sp.PD-KGer, FINASIM</span>
+          <p class="text-xs text-slate-300 mt-1">Comprehensive Geriatric Assessment dalam Pengambilan Keputusan Klinis</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-teal-300">dr. Jo Carolina Margaret, Sp.PD</span>
+          <p class="text-xs text-slate-300 mt-1">Pendekatan Klinis pada Frailty dan Healthy Aging dalam Praktik Kedokteran</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60">
+          <span class="text-xs font-bold text-teal-300">dr. Andre, Sp.N., F.</span>
+          <p class="text-xs text-slate-300 mt-1">Pendekatan Klinis pada Gangguan Kognitif dan Demensia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const dayBtns = document.querySelectorAll('.day-btn');
+  const dayContents = document.querySelectorAll('.day-content');
+  const searchInput = document.getElementById('schedule-search') as HTMLInputElement;
+
+  dayBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-day-tab');
+      dayBtns.forEach(b => {
+        b.classList.remove('bg-gradient-to-r', 'from-sky-600', 'to-sky-700', 'text-white', 'shadow-md', 'bg-gradient-to-r', 'from-amber-500', 'to-amber-600', 'text-slate-950');
+        b.classList.add('text-slate-300');
+      });
+
+      if (target === 'day1') {
+        btn.classList.add('bg-gradient-to-r', 'from-sky-600', 'to-sky-700', 'text-white', 'shadow-md');
+        btn.classList.remove('text-slate-300');
+        document.getElementById('day1-content')?.classList.remove('hidden');
+        document.getElementById('day2-content')?.classList.add('hidden');
+      } else {
+        btn.classList.add('bg-gradient-to-r', 'from-amber-500', 'to-amber-600', 'text-slate-950', 'shadow-md');
+        btn.classList.remove('text-slate-300');
+        document.getElementById('day2-content')?.classList.remove('hidden');
+        document.getElementById('day1-content')?.classList.add('hidden');
+      }
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = (e.target as HTMLInputElement).value.toLowerCase();
+      const items = document.querySelectorAll('.schedule-item');
+      items.forEach((item) => {
+        const text = item.textContent?.toLowerCase() || '';
+        if (text.includes(query)) {
+          (item as HTMLElement).style.display = '';
+        } else {
+          (item as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  }
+</script>

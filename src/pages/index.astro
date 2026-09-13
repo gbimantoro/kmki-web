@@ -1,0 +1,661 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Medical3DVector from '../components/Medical3DVector.astro';
+---
+
+<MainLayout 
+  title="KMKI Indonesia - Komunitas Medik Katolik Indonesia | Berakar pada Iman, Unggul dalam Kompetensi"
+  description="Website resmi Komunitas Medik Katolik Indonesia (KMKI). Wadah perhimpunan tenaga medis dan dokter Katolik di 20 keuskupan se-Indonesia. Pelayanan kesehatan, bioetika, dan pengembangan keprofesian berkelanjutan."
+>
+
+  <!-- HERO SECTION: Ledger & Medical Astro Theme Inspired -->
+  <section class="relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50 bg-grid-pattern">
+    <!-- 3D Glowing Ambient Orbs -->
+    <div class="vibrant-glow-blue w-96 h-96 -top-20 -left-20 opacity-60"></div>
+    <div class="vibrant-glow-amber w-[450px] h-[450px] top-1/3 -right-20 opacity-40"></div>
+    <div class="vibrant-glow-emerald w-80 h-80 bottom-0 left-1/3 opacity-30"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Top Announcement Pill -->
+      <div class="flex justify-center mb-6">
+        <a 
+          href="/ccpg2026" 
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-sky-200 text-xs sm:text-sm font-semibold text-slate-700 shadow-xs hover:border-amber-400 hover:shadow-md transition group backdrop-blur-xs"
+        >
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+          </span>
+          <span class="text-sky-700 font-bold">Simposium Nasional #CCPG2026:</span>
+          <span class="text-slate-600 font-medium hidden sm:inline">7-8 November 2026 di RS Carolus Jakarta</span>
+          <span class="text-amber-600 font-bold group-hover:translate-x-0.5 transition">&rarr; Info & Tiket</span>
+        </a>
+      </div>
+
+      <!-- Main Headline & Intro -->
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 mb-3">
+          <span class="px-3 py-1 rounded-md bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider">
+            Komunitas Medik Katolik Indonesia
+          </span>
+          <span class="text-xs text-slate-500">Est. 11 Februari 2001</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] mb-6">
+          Melayani dengan <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-blue-700 to-indigo-800">Kasih Kristiani</span>, Unggul dalam <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-700">Kompetensi Medis</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed mb-8">
+          Wadah perhimpunan dokter, dokter gigi, dan tenaga medik Katolik di 20 Keuskupan se-Indonesia. Berkomitmen menghidupi panggilan penyembuhan Yesus Kristus melalui integritas bioetika, pelayanan karitatif, dan pengembangan ilmu kedokteran mutakhir.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="/ccpg2026" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-sky-600 via-sky-700 to-blue-800 hover:from-sky-500 hover:to-blue-700 shadow-xl shadow-sky-600/25 hover:shadow-sky-600/35 transition transform hover:-translate-y-0.5"
+          >
+            <svg class="w-5 h-5 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            <span>Daftar Simposium CCPG 2026</span>
+          </a>
+
+          <a 
+            href="#pelayanan" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 shadow-sm hover:shadow transition"
+          >
+            <svg class="w-5 h-5 text-sky-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Pilar & Pelayanan</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card with Header Image & 3D Badges -->
+      <div class="relative max-w-5xl mx-auto mt-6">
+        <!-- Floating 3D Graphic Elements -->
+        <div class="absolute -top-6 -left-6 z-20 hidden md:block">
+          <div class="glass-panel p-3 rounded-2xl shadow-xl flex items-center gap-3 border border-white">
+            <Medical3DVector name="cross-asclepius" size={48} />
+            <div>
+              <p class="text-xs font-bold text-slate-900">Nilai Kristiani & Moral</p>
+              <p class="text-[11px] text-slate-500">Integritas Bioetika Kedokteran</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute -bottom-6 -right-6 z-20 hidden md:block">
+          <div class="glass-panel p-3 rounded-2xl shadow-xl flex items-center gap-3 border border-white">
+            <Medical3DVector name="brain-ai" size={48} />
+            <div>
+              <p class="text-xs font-bold text-slate-900">EBM & Artificial Intelligence</p>
+              <p class="text-[11px] text-slate-500">Kompetensi Digital Masa Depan</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Banner Card -->
+        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 relative">
+          <img 
+            src="/images/header.jpg" 
+            alt="Komunitas Medik Katolik Indonesia - Rosary and Medical Technology" 
+            class="w-full h-64 sm:h-80 md:h-96 object-cover object-center opacity-90 hover:scale-102 transition duration-700"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-6 sm:p-10">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="/images/logo.jpg" alt="KMKI Logo" class="w-10 h-10 rounded-full border-2 border-amber-400 bg-white shadow-md" />
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-300">Komunitas Medik Katolik Indonesia</span>
+                <p class="text-white text-base sm:text-xl font-extrabold">20 Keuskupan di Seluruh Pelosok Nusantara</p>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+              Menyatukan para dokter dan pemerhati kesehatan Katolik untuk bersaksi melalui keahlian medis yang berbelarasa bagi mereka yang sakit, miskin, dan menderita.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Grid (Ledger Theme Style) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto mt-12">
+        <div class="glass-panel p-5 rounded-2xl text-center glass-card-hover border border-slate-200/80">
+          <div class="text-3xl sm:text-4xl font-black text-sky-700">20</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-800 mt-1">Wilayah Keuskupan</div>
+          <p class="text-[11px] text-slate-500 mt-0.5">Aktif di Jawa, Sumatera, Kalimantan, Sulawesi s.d. Papua</p>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl text-center glass-card-hover border border-slate-200/80">
+          <div class="text-3xl sm:text-4xl font-black text-amber-600">25+</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-800 mt-1">Tahun Pelayanan</div>
+          <p class="text-[11px] text-slate-500 mt-0.5">Sejak didirikan 11 Februari 2001</p>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl text-center glass-card-hover border border-slate-200/80">
+          <div class="text-3xl sm:text-4xl font-black text-emerald-600">1.500+</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-800 mt-1">Dokter & Spesialis</div>
+          <p class="text-[11px] text-slate-500 mt-0.5">Anggota perhimpunan profesional</p>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl text-center glass-card-hover border border-slate-200/80">
+          <div class="text-3xl sm:text-4xl font-black text-blue-700">100%</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-800 mt-1">Nilai & Bioetika</div>
+          <p class="text-[11px] text-slate-500 mt-0.5">Berakar pada Iman & Moral Katolik</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- HIGHLIGHT SECTION: 9th CCPG 2026 SYMPOSIUM SPOTLIGHT -->
+  <section class="py-16 bg-gradient-to-br from-slate-900 via-sky-950 to-slate-950 text-white relative overflow-hidden">
+    <div class="vibrant-glow-amber w-96 h-96 top-10 right-10 opacity-30"></div>
+    <div class="vibrant-glow-blue w-96 h-96 -bottom-10 -left-10 opacity-40"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+        
+        <!-- Left Column: Event Badges & Details -->
+        <div class="lg:w-7/12 space-y-5">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 tracking-wide uppercase">
+              Highlight Event 2026
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">
+              Offline Symposium
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+              SKP Kemenkes / Plataran Sehat
+            </span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
+            9th Current Clinical Practice Guidelines <span class="text-amber-400">#CCPG2026</span>
+          </h2>
+
+          <p class="text-base sm:text-lg text-sky-100 font-medium leading-relaxed">
+            "Penguatan Kompetensi Klinis dalam Praktik Kedokteran melalui Evidence-Based Practice, Precision Medicine, dan Artificial Intelligence"
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-xs">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block">Waktu Pelaksanaan</span>
+                  <strong class="text-sm text-white">Sabtu - Minggu, 7 - 8 Nov 2026</strong>
+                  <span class="text-[11px] text-sky-300 block">07.00 - 16.00 WIB</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-xs">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block">Lokasi Pertemuan</span>
+                  <strong class="text-sm text-white">Auditorium Stella Maris</strong>
+                  <span class="text-[11px] text-amber-300 block">RS Carolus, Salemba Jakarta</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Organizer Collaboration -->
+          <div class="pt-2 text-xs text-slate-300 space-y-1">
+            <span class="text-slate-400 block">Penyelenggara Bersama:</span>
+            <p class="font-medium text-slate-200">
+              Badan Pendidikan dan Pelatihan FKIK Universitas Katolik Indonesia Atma Jaya bekerja sama dengan Panitia CCPG 2026 - KMKI Wilayah KAJ
+            </p>
+          </div>
+
+          <!-- Direct Link to Event Landing Page -->
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a 
+              href="/ccpg2026" 
+              class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-sm shadow-xl transition transform hover:-translate-y-0.5"
+            >
+              <span>Buka Portal Event CCPG 2026</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a 
+              href="/ccpg2026#jadwal" 
+              class="inline-flex items-center gap-1.5 px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 transition"
+            >
+              <span>Jadwal Sesi & 18 Pembicara</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Preview of CCPG Flyer / Canva Asset -->
+        <div class="lg:w-5/12">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-amber-500 rounded-3xl blur-md opacity-40 group-hover:opacity-75 transition duration-500"></div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl bg-slate-900">
+              <img 
+                src="/images/pdf_extracted/page-1.png" 
+                alt="Flyer CCPG 2026 Official Flyer" 
+                class="w-full h-auto object-cover max-h-[480px] group-hover:scale-103 transition duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-6">
+                <span class="text-xs text-amber-400 font-bold uppercase">Biaya Investasi Pendaftaran</span>
+                <div class="flex items-baseline gap-4 mt-1">
+                  <div>
+                    <span class="text-[11px] text-slate-300 block">Dokter Umum:</span>
+                    <strong class="text-lg text-white font-mono">Rp 300.000,-</strong>
+                  </div>
+                  <div class="border-l border-white/20 pl-4">
+                    <span class="text-[11px] text-slate-300 block">Dokter Spesialis:</span>
+                    <strong class="text-lg text-amber-300 font-mono">Rp 400.000,-</strong>
+                  </div>
+                </div>
+                <a href="/ccpg2026" class="mt-3 block text-center text-xs font-bold text-sky-300 hover:text-white underline">
+                  Klik untuk melihat detail jadwal, silabus & registrasi online &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- VISI, MISI & NILAI: Ledger Theme Style Feature Cards -->
+  <section id="visi-misi" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3.5 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider">
+          Fondasi Spiritualitas & Profesionalisme
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 tracking-tight">
+          Visi, Misi & Nilai Dasar KMKI
+        </h2>
+        <p class="text-base text-slate-600 mt-3">
+          Memadukan keutamaan moral Katolik dengan standar medis internasional untuk pelayanan kesehatan yang utuh dan bermartabat.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Spiritualitas -->
+        <div class="glass-panel p-8 rounded-2xl glass-card-hover border border-slate-200/90 relative group">
+          <div class="w-16 h-16 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center mb-6 group-hover:scale-110 transition">
+            <Medical3DVector name="cross-asclepius" size={48} />
+          </div>
+          <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Pilar I</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">Spiritualitas & Iman Kristiani</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Membina kehidupan batin dan iman para dokter katolik, sehingga setiap tindakan medis menjadi wujud perpanjangan tangan penyembuhan Kristus bagi yang menderita.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+              Misa Hari Orang Sakit Sedunia (11 Feb)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+              Retret & Rekoleksi Medis Keuskupan
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+              Doa Rosario & Pendampingan Pastoral
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Keunggulan Klinis -->
+        <div class="glass-panel p-8 rounded-2xl glass-card-hover border border-slate-200/90 relative group">
+          <div class="w-16 h-16 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-center mb-6 group-hover:scale-110 transition">
+            <Medical3DVector name="stethoscope-ai" size={48} />
+          </div>
+          <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Pilar II</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">Keunggulan Profesional & Bioetika</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Mengembangkan kompetensi medis mutakhir berbasis Evidence-Based Medicine (EBM), precision medicine, dan teknologi AI dengan berpegang teguh pada moral Katolik.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+              Simposium Tahunan CCPG Ber-SKP
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+              Kajian Bioetika: End-of-Life & Reproduksi
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+              Pelatihan Kepemimpinan Klinis
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Belarasa & Bakti Sosial -->
+        <div class="glass-panel p-8 rounded-2xl glass-card-hover border border-slate-200/90 relative group">
+          <div class="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center mb-6 group-hover:scale-110 transition">
+            <Medical3DVector name="heart-pulse" size={48} />
+          </div>
+          <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Pilar III</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">Belarasa & Karya Karitatif</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Mengutamakan mereka yang miskin, rentan, dan terpinggirkan (*preferential option for the poor*) melalui bakti sosial kesehatan, klinik umat, dan tanggap bencana.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Bakti Sosial Medis Daerah Terpencil
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Tim Tanggap Darurat Bencana Alam
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Klinik Paroki & Edukasi Gaya Hidup Sehat
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PILAR PELAYANAN & PROGRAM KERJA: Medical Theme Department Style -->
+  <section id="pelayanan" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div>
+          <span class="px-3.5 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider">
+            Layanan & Program Kerja
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2 tracking-tight">
+            Kiprah Nyata KMKI bagi Kesehatan Bangsa
+          </h2>
+        </div>
+        <p class="text-sm text-slate-600 max-w-md">
+          Mencakup berbagai bidang spesialisasi kedokteran, pengabdian masyarakat di tingkat paroki dan keuskupan, serta advokasi kebijakan publik.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-white p-6 rounded-2xl shadow-xs hover:shadow-xl transition border border-slate-200/80 group">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 mb-4 group-hover:bg-sky-600 group-hover:text-white transition">
+            <Medical3DVector name="microscope" size={36} />
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Simposium Ilmiah & CME</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Penyelenggaraan simposium berskala nasional berkala dengan akreditasi Kemenkes RI, menghadirkan para guru besar dan pakar spesialis terkini.
+          </p>
+          <a href="/ccpg2026" class="text-xs font-bold text-sky-700 hover:text-sky-800 flex items-center gap-1">
+            Simposium CCPG 2026 &rarr;
+          </a>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-xs hover:shadow-xl transition border border-slate-200/80 group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-4 group-hover:bg-emerald-600 group-hover:text-white transition">
+            <Medical3DVector name="shield-check" size={36} />
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Pusat Kajian Bioetika</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Forum konsultasi dan pedoman etika medis seputar awal kehidupan, keluarga berencana alami (FABMs), akhir kehidupan, dan etika AI.
+          </p>
+          <a href="/tentang" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1">
+            Pelajari Bioetika &rarr;
+          </a>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-xs hover:shadow-xl transition border border-slate-200/80 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600 mb-4 group-hover:bg-amber-600 group-hover:text-white transition">
+            <Medical3DVector name="hospital" size={36} />
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Bakti Medis & Bencana</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Penyaluran dokter dan relawan tenaga kesehatan ke wilayah tertinggal, terluar, serta respons cepat tanggap darurat bencana alam gempa bumi & banjir.
+          </p>
+          <a href="/pelayanan" class="text-xs font-bold text-amber-700 hover:text-amber-800 flex items-center gap-1">
+            Lihat Dokumentasi &rarr;
+          </a>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-xs hover:shadow-xl transition border border-slate-200/80 group">
+          <div class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+            <Medical3DVector name="cross-asclepius" size={36} />
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Pastoral Tenaga Medis</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Pendampingan rohani bagi mahasiswa kedokteran, dokter muda, spesialis, hingga purna tugas agar tetap teguh dalam panggilan dan integritas profesi.
+          </p>
+          <a href="/tentang" class="text-xs font-bold text-indigo-700 hover:text-indigo-800 flex items-center gap-1">
+            Komunitas & Rekoleksi &rarr;
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 20 KEUSKUPAN REGIONAL NETWORK (Scroll-World / Interactive Grid) -->
+  <section id="keuskupan" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="px-3.5 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider">
+          Jaringan Seluruh Indonesia
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2 tracking-tight">
+          20 Wilayah Keuskupan KMKI
+        </h2>
+        <p class="text-base text-slate-600 mt-2">
+          KMKI hadir dan melayani secara terdesentralisasi di 20 Keuskupan di Indonesia di bawah koordinasi Komisi Kesehatan KWI.
+        </p>
+      </div>
+
+      <!-- Regional Pills / Filter Tabs -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5">
+        
+        <!-- KAJ (Host CCPG 2026) -->
+        <div class="p-4 rounded-xl bg-gradient-to-br from-amber-50 to-sky-50 border-2 border-amber-300 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-amber-400 text-slate-950">
+              Host CCPG
+            </span>
+            <span class="text-xs text-slate-400 font-mono">KAJ</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Agung Jakarta</h4>
+          <p class="text-[11px] text-slate-600 mt-1">KMKI Wilayah KAJ • RS Carolus, FKIK Unika Atma Jaya</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-sky-700 bg-sky-100 px-2 py-0.5 rounded">Jawa</span>
+            <span class="text-xs text-slate-400 font-mono">KAS</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Agung Semarang</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Semarang, Yogyakarta, Surakarta & Magelang</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-sky-700 bg-sky-100 px-2 py-0.5 rounded">Jawa Barat</span>
+            <span class="text-xs text-slate-400 font-mono">K.Bdg</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Bandung</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Bandung Raya, Cirebon, Garut, Tasikmalaya</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-sky-700 bg-sky-100 px-2 py-0.5 rounded">Jawa Barat</span>
+            <span class="text-xs text-slate-400 font-mono">K.Bgr</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Bogor</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Bogor, Depok, Sukabumi, Cianjur, Serang</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-sky-700 bg-sky-100 px-2 py-0.5 rounded">Jawa Timur</span>
+            <span class="text-xs text-slate-400 font-mono">K.Sby</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Surabaya</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Surabaya, Sidoarjo, Mojokerto, Madiun</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-sky-700 bg-sky-100 px-2 py-0.5 rounded">Jawa Timur</span>
+            <span class="text-xs text-slate-400 font-mono">K.Mlg</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Malang</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Malang Raya, Blitar, Pasuruan, Probolinggo</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-sky-700 bg-sky-100 px-2 py-0.5 rounded">Jawa Tengah</span>
+            <span class="text-xs text-slate-400 font-mono">K.Pwk</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Purwokerto</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Banyumas, Cilacap, Purbalingga, Pekalongan</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Sumatera</span>
+            <span class="text-xs text-slate-400 font-mono">KAM</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Agung Medan</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Sumatera Utara, Medan, Pematangsiantar, Toba</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Sumatera</span>
+            <span class="text-xs text-slate-400 font-mono">KAP</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Agung Palembang</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Sumatera Selatan, Jambi, Bengkulu</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Sumatera</span>
+            <span class="text-xs text-slate-400 font-mono">K.Pdg</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Padang</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Sumatera Barat, Riau, Mentawai</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Sumatera</span>
+            <span class="text-xs text-slate-400 font-mono">K.Tgk</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Tanjungkarang</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Provinsi Lampung & Sekitarnya</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Kepulauan</span>
+            <span class="text-xs text-slate-400 font-mono">K.Pkp</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Pangkalpinang</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Bangka Belitung, Batam, Kepulauan Riau</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Kalimantan</span>
+            <span class="text-xs text-slate-400 font-mono">KAPt</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Agung Pontianak</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Pontianak, Landak, Mempawah, Sanggau</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Kalimantan</span>
+            <span class="text-xs text-slate-400 font-mono">KASm</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Agung Samarinda</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Kalimantan Timur, Balikpapan, IKN Nusantara</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Kalimantan</span>
+            <span class="text-xs text-slate-400 font-mono">K.Bjm</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Banjarmasin</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Kalimantan Selatan & sekitarnya</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded">Sulawesi</span>
+            <span class="text-xs text-slate-400 font-mono">KAMk</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Agung Makassar</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Sulawesi Selatan, Toraja, Sulawesi Barat</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded">Sulawesi</span>
+            <span class="text-xs text-slate-400 font-mono">K.Mnd</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Manado</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Sulawesi Utara, Gorontalo, Minahasa, Tomohon</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Bali-NTB</span>
+            <span class="text-xs text-slate-400 font-mono">K.Dps</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Denpasar</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Provinsi Bali & Nusa Tenggara Barat</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">NTT</span>
+            <span class="text-xs text-slate-400 font-mono">KAMb</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Agung Kupang & Ende</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Timor, Flores, Sumba, Rote, Sabu</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50/60 border border-slate-200 transition">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-semibold text-rose-700 bg-rose-100 px-2 py-0.5 rounded">Papua</span>
+            <span class="text-xs text-slate-400 font-mono">K.Jyp</span>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Keuskupan Jayapura & Merauke</h4>
+          <p class="text-[11px] text-slate-600 mt-1">Tanah Papua, Timika, Asmat, Sorong</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</MainLayout>

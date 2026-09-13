@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>KMKI Indonesia</title>
+    <style>
+      body { font-family: system-ui, sans-serif; line-height: 1.6; margin: 0; padding: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+      header, footer { text-align: center; padding: 1rem 0; }
+      nav { background: #0066cc; color: white; padding: 0.5rem; }
+      nav a { color: white; margin: 0 1rem; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>KMKI Indonesia</h1>
+    </header>
+    <nav>
+      <a href="/beranda">Beranda</a>
+      <a href="/tentang">Tentang</a>
+      <a href="/kontak">Kontak</a>
+    </nav>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>&copy; 2026 KMKI Indonesia</p>
+    </footer>
+  </body>
+</html>

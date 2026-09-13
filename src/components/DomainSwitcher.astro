@@ -1,0 +1,61 @@
+---
+interface Props {
+  currentHighlight: 'main' | 'ccpg2026';
+}
+
+const { currentHighlight } = Astro.props;
+---
+
+<div class="bg-gradient-to-r from-slate-900 via-sky-950 to-slate-900 text-white text-xs border-b border-sky-800/40 py-1.5 px-3 relative z-50">
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+    <!-- Left: KMKI Network -->
+    <div class="flex items-center gap-2 text-slate-300">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 font-bold border border-sky-400/30 text-xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        KMKI Network
+      </span>
+      <span class="hidden md:inline text-slate-400 text-[11px]">
+        Komunitas Medik Katolik Indonesia • 20 Keuskupan
+      </span>
+    </div>
+
+    <!-- Center/Right: Switcher with 🎓 CCPG 2026 -->
+    <div class="flex items-center gap-1 bg-slate-800/90 p-0.5 rounded-lg border border-slate-700">
+      <!-- Main Org Switch -->
+      <a 
+        href="/" 
+        class={`flex items-center gap-1.5 px-3 py-1 rounded-md transition text-xs font-semibold ${
+          currentHighlight === 'main'
+            ? 'bg-sky-600 text-white shadow-xs'
+            : 'text-slate-400 hover:text-white hover:bg-slate-700/50'
+        }`}
+        title="Portal Resmi KMKI Indonesia"
+      >
+        <span>kmki.or.id</span>
+      </a>
+
+      <!-- Event Landing Page Switch with 🎓 icon -->
+      <a 
+        href="/ccpg2026" 
+        class={`flex items-center gap-1.5 px-3 py-1 rounded-md transition text-xs font-bold ${
+          currentHighlight === 'ccpg2026'
+            ? 'bg-amber-400 text-slate-950 shadow-xs'
+            : 'text-amber-300 hover:text-amber-200 hover:bg-slate-700/50'
+        }`}
+        title="Landing Page Simposium CCPG 2026"
+      >
+        <span class="text-sm">🎓</span>
+        <span>CCPG 2026</span>
+        <span class="bg-amber-400/20 text-amber-300 border border-amber-400/30 text-[9px] px-1.5 py-0.2 rounded font-extrabold uppercase tracking-wider">
+          7-8 Nov
+        </span>
+      </a>
+    </div>
+
+    <!-- Quick Info -->
+    <div class="hidden lg:flex items-center gap-3 text-slate-300 text-xs">
+      <span class="text-slate-400">Telp:</span>
+      <a href="tel:0214515601" class="font-bold text-sky-300 hover:text-white">021-451-5601</a>
+    </div>
+  </div>
+</div>

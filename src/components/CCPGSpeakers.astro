@@ -1,0 +1,308 @@
+---
+import Medical3DVector from './Medical3DVector.astro';
+
+const speakers = [
+  {
+    name: "Dr. dr. Laurentius Aswin Pramono, M.Epid, M.Pd.Ked, Sp.PD-KEMD",
+    specialty: "Spesialis Penyakit Dalam - Konsultan Endokrin, Metabolik & Diabetes",
+    category: "metabolik",
+    badge: "Plenary & Lunch Simposium",
+    role: "Pakar Precision Medicine Obesitas & Diabetes Mellitus",
+    color: "sky"
+  },
+  {
+    name: "Dr. dr. Stevent Sumantri, SpPD, K-AI, DAA, FINASIM",
+    specialty: "Spesialis Penyakit Dalam - Konsultan Alergi & Imunologi Klinik",
+    category: "imunologi",
+    badge: "Sesi IV",
+    role: "Strategi Imunisasi Lansia Berbasis Risiko",
+    color: "indigo"
+  },
+  {
+    name: "dr. Gregorius Bimantoro",
+    specialty: "Pakar Teknologi Kesehatan Digital & Founder",
+    category: "ai-etika",
+    badge: "Plenary Lecture I",
+    role: "Clinical Decision Making di Era Artificial Intelligence",
+    color: "amber"
+  },
+  {
+    name: "dr. Timothy John Jusuf",
+    specialty: "Praktisi Komunikasi Klinis & Tata Kelola Digital",
+    category: "ai-etika",
+    badge: "Plenary Lecture II",
+    role: "Profesionalisme Dokter di Era Digital & Etika Praktik",
+    color: "amber"
+  },
+  {
+    name: "Dr. dr. Yudy, Sp.FM",
+    specialty: "Spesialis Kedokteran Forensik & Medikolegal",
+    category: "ai-etika",
+    badge: "Plenary Lecture III",
+    role: "Etika Praktik, Tata Kelola Teknologi Kesehatan, dan AI",
+    color: "amber"
+  },
+  {
+    name: "Dr. dr. Nanny Djaya, Sp. GK",
+    specialty: "Spesialis Gizi Klinik",
+    category: "metabolik",
+    badge: "Sesi I",
+    role: "Tata Laksana Gizi pada Obesitas Berdasarkan Guidelines",
+    color: "emerald"
+  },
+  {
+    name: "Dr. dr. Ignatio Rika Haryono, Sp.KO., Subsp.ALK(K)",
+    specialty: "Spesialis Kedokteran Olahraga",
+    category: "metabolik",
+    badge: "Sesi I",
+    role: "Exercise Prescription pada Tata Laksana Obesitas Berbasis Bukti",
+    color: "emerald"
+  },
+  {
+    name: "dr. Jeanne Laurensie Sihombing, Sp.A",
+    specialty: "Spesialis Kesehatan Anak",
+    category: "pediatri",
+    badge: "Sesi II",
+    role: "Clinical Decision Making pada Imunisasi Anak Terkini",
+    color: "teal"
+  },
+  {
+    name: "dr. Ria Yoanita, Sp.A, CIMI, CBS",
+    specialty: "Spesialis Kesehatan Anak",
+    category: "pediatri",
+    badge: "Sesi II",
+    role: "Skrining Tumbuh Kembang Anak Berdasarkan CPG",
+    color: "teal"
+  },
+  {
+    name: "Dr. dr. Fransisca Handy Agung, Sp.A, IBCLC",
+    specialty: "Spesialis Anak & Konsultan Laktasi",
+    category: "pediatri",
+    badge: "Sesi II",
+    role: "Tatalaksana Obesitas pada Anak Berbasis Bukti",
+    color: "teal"
+  },
+  {
+    name: "dr. Hardjo Prawira, Sp.PD, KKV, FINASIM, FICA",
+    specialty: "Spesialis Penyakit Dalam - Konsultan Kardiovaskular",
+    category: "kardio",
+    badge: "Sesi III",
+    role: "Clinical Decision Making pada Tata Laksana Hipertensi",
+    color: "rose"
+  },
+  {
+    name: "dr. Maria Riastuti Iryaningrum, Sp.PD-KGH, FINASIM",
+    specialty: "Spesialis Penyakit Dalam - Konsultan Ginjal & Hipertensi",
+    category: "kardio",
+    badge: "Sesi III",
+    role: "Implementasi CPG pada Tata Laksana Dislipidemia",
+    color: "rose"
+  },
+  {
+    name: "dr. Rachmat Hamonangan, Sp.PD-KKV",
+    specialty: "Spesialis Penyakit Dalam - Konsultan Kardiovaskular",
+    category: "kardio",
+    badge: "Sesi III",
+    role: "Penyakit Jantung di Layanan Primer Berdasarkan Guidelines",
+    color: "rose"
+  },
+  {
+    name: "dr. Yunita Maslim, Sp.PD, K-AI, FINASIM",
+    specialty: "Spesialis Penyakit Dalam - Konsultan Alergi & Imunologi",
+    category: "imunologi",
+    badge: "Sesi IV",
+    role: "Pendekatan Klinis pada Penyakit Alergi di Praktik Sehari-hari",
+    color: "indigo"
+  },
+  {
+    name: "dr. Cindy, M.Biomed, Sp.PD-KR",
+    specialty: "Spesialis Penyakit Dalam - Konsultan Reumatologi",
+    category: "imunologi",
+    badge: "Sesi IV",
+    role: "Precision Medicine & CPG pada Deteksi Dini Penyakit Autoimun",
+    color: "indigo"
+  },
+  {
+    name: "dr. Dyana Safitri Velies, Sp.OG (K)-Obginsos, M.Kes",
+    specialty: "Spesialis Obstetri & Ginekologi Sosial",
+    category: "wanita",
+    badge: "Sesi V",
+    role: "Pendekatan Klinis Komprehensif pada Kehamilan Remaja",
+    color: "pink"
+  },
+  {
+    name: "dr. Caecilia Hendriani, M.Kes",
+    specialty: "Pakar Kesehatan Reproduksi & FABMs",
+    category: "wanita",
+    badge: "Sesi V",
+    role: "Pemilihan Metode Kontrasepsi Termasuk Natural FABMs",
+    color: "pink"
+  },
+  {
+    name: "dr. Galuh Chandra Kirana S, SpPD, K.H.Onk.M, FINASIM",
+    specialty: "Spesialis Penyakit Dalam - Konsultan Hematologi & Onkologi",
+    category: "wanita",
+    badge: "Sesi V",
+    role: "Pendekatan Klinis pada Skrining Kanker Wanita Berbasis Risiko",
+    color: "pink"
+  },
+  {
+    name: "dr. Eva Suryani, Sp.KJ",
+    specialty: "Spesialis Kedokteran Jiwa (Psikiatri)",
+    category: "neuro",
+    badge: "Sesi VI",
+    role: "Clinical Decision Making pada Depresi dan Gangguan Ansietas",
+    color: "purple"
+  },
+  {
+    name: "Dr. dr. Rimawati Tedjasukmana, SpS, Subsp E.N.K(K), RPSGT",
+    specialty: "Spesialis Neurologi - Konsultan Somnologi",
+    category: "neuro",
+    badge: "Sesi VI",
+    role: "Pendekatan Klinis pada Gangguan Tidur (Sleep Medicine)",
+    color: "purple"
+  },
+  {
+    name: "Dr. dr. Jimmy Fransisco Abadinta Barus, M.Sc., Sp.N",
+    specialty: "Spesialis Neurologi & Manajemen Nyeri",
+    category: "neuro",
+    badge: "Sesi VI",
+    role: "Pendekatan Multimodal Tata Laksana Nyeri Kronis NonKanker",
+    color: "purple"
+  },
+  {
+    name: "dr. Rensa, Sp.PD-KGer, FINASIM",
+    specialty: "Spesialis Penyakit Dalam - Konsultan Geriatri",
+    category: "geriatri",
+    badge: "Sesi VII",
+    role: "Comprehensive Geriatric Assessment dalam Keputusan Klinis",
+    color: "teal"
+  },
+  {
+    name: "dr. Jo Carolina Margaret, Sp.PD",
+    specialty: "Spesialis Penyakit Dalam",
+    category: "geriatri",
+    badge: "Sesi VII",
+    role: "Pendekatan Klinis pada Frailty dan Healthy Aging",
+    color: "teal"
+  },
+  {
+    name: "dr. Andre, Sp.N., F.",
+    specialty: "Spesialis Neurologi",
+    category: "geriatri",
+    badge: "Sesi VII",
+    role: "Pendekatan Klinis pada Gangguan Kognitif dan Demensia",
+    color: "teal"
+  },
+  {
+    name: "dr. Riki Tenggara, Sp.PD-KGEH, M.Kes, FINASIM",
+    specialty: "Spesialis Penyakit Dalam - Konsultan Gastroentero-Hepatologi",
+    category: "metabolik",
+    badge: "Lunch Simposium II",
+    role: "Pendekatan Klinis pada Diagnosis dan Tata Laksana GERD",
+    color: "amber"
+  }
+];
+---
+
+<div class="space-y-8" id="speaker-section">
+  
+  <!-- Category Filter Buttons -->
+  <div class="flex flex-wrap items-center justify-center gap-2">
+    <button type="button" data-cat="all" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-amber-400 text-slate-950 transition active-cat">
+      Semua Pakar ({speakers.length})
+    </button>
+    <button type="button" data-cat="ai-etika" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition">
+      AI & Etika Digital
+    </button>
+    <button type="button" data-cat="metabolik" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition">
+      Obesitas, DM & Metabolik
+    </button>
+    <button type="button" data-cat="kardio" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition">
+      Kardiovaskular & Ginjal
+    </button>
+    <button type="button" data-cat="pediatri" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition">
+      Kesehatan Anak
+    </button>
+    <button type="button" data-cat="imunologi" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition">
+      Alergi, Imun & Reuma
+    </button>
+    <button type="button" data-cat="wanita" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition">
+      Kesehatan Wanita & Onko
+    </button>
+    <button type="button" data-cat="neuro" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition">
+      Saraf, Jiwa & Nyeri
+    </button>
+    <button type="button" data-cat="geriatri" class="cat-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white transition">
+      Geriatri & Healthy Aging
+    </button>
+  </div>
+
+  <!-- Speaker Cards Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="speaker-grid">
+    {speakers.map((sp) => (
+      <div 
+        class="speaker-card glass-panel-dark p-6 rounded-2xl border border-slate-800 hover:border-amber-400/50 hover:shadow-2xl transition duration-300 flex flex-col justify-between group"
+        data-category={sp.category}
+      >
+        <div>
+          <!-- Header Tag -->
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-slate-800 text-amber-300 border border-amber-400/20">
+              {sp.badge}
+            </span>
+            <span class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-amber-400 transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </span>
+          </div>
+
+          <!-- Doctor Name & Credentials -->
+          <h4 class="text-base font-bold text-white group-hover:text-amber-300 transition leading-snug">
+            {sp.name}
+          </h4>
+
+          <p class="text-xs text-slate-400 mt-1 font-medium line-clamp-2">
+            {sp.specialty}
+          </p>
+        </div>
+
+        <!-- Lecture Topic / Role -->
+        <div class="mt-4 pt-3 border-t border-slate-800/80">
+          <span class="text-[10px] text-slate-500 uppercase tracking-wider block font-semibold">Materi / Topik:</span>
+          <p class="text-xs text-sky-200 font-medium mt-0.5 line-clamp-2">
+            "{sp.role}"
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+</div>
+
+<script>
+  const catBtns = document.querySelectorAll('.cat-filter-btn');
+  const cards = document.querySelectorAll('.speaker-card');
+
+  catBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const cat = btn.getAttribute('data-cat');
+      catBtns.forEach(b => {
+        b.classList.remove('bg-amber-400', 'text-slate-950');
+        b.classList.add('bg-slate-800', 'text-slate-300');
+      });
+      btn.classList.add('bg-amber-400', 'text-slate-950');
+      btn.classList.remove('bg-slate-800', 'text-slate-300');
+
+      cards.forEach((card) => {
+        const itemCat = card.getAttribute('data-category');
+        if (cat === 'all' || itemCat === cat) {
+          (card as HTMLElement).style.display = '';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
