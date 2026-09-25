@@ -92,9 +92,9 @@ const waLink = "https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20s
 
           <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-md">
             <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Email Pengiriman:</span>
-            <a href={mailtoLink} class="text-xs sm:text-sm font-bold text-sky-400 hover:underline block truncate mt-1">
-              <!--email_off-->nanny.djaja@atmajaya.ac.id<!--/email_off-->
-            </a>
+            <!--email_off--><a href={mailtoLink} class="text-xs sm:text-sm font-bold text-sky-400 hover:underline block truncate mt-1">
+              nanny.djaja@atmajaya.ac.id
+            </a><!--/email_off-->
             <span class="text-[11px] text-slate-400">Subject: ABSTRACT - CPG 2026</span>
           </div>
         </div>
@@ -462,12 +462,12 @@ const waLink = "https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20s
               <div class="space-y-3">
                 <div class="text-xs text-slate-300">
                   <span class="block text-slate-400 mb-0.5">Kirimkan file abstrak Anda melalui email:</span>
-                  <a 
+                  <!--email_off--><a 
                     href={mailtoLink}
                     class="text-sm font-black text-amber-300 hover:underline block font-mono"
                   >
-                    <!--email_off-->nanny.djaja@atmajaya.ac.id<!--/email_off-->
-                  </a>
+                    nanny.djaja@atmajaya.ac.id
+                  </a><!--/email_off-->
                 </div>
 
                 <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs">
@@ -485,28 +485,32 @@ const waLink = "https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20s
                   </div>
                 </div>
 
-                <a 
+                <!--email_off--><a 
                   href={mailtoLink}
                   class="w-full text-center py-3 px-4 rounded-xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-white font-bold text-xs shadow-md transition block"
                 >
                   Buka Aplikasi Email & Kirim Sekarang &rarr;
-                </a>
+                </a><!--/email_off-->
               </div>
             </div>
 
             <!-- Contact Person Card -->
-            <div class="p-5 rounded-3xl bg-gradient-to-r from-emerald-950/40 to-slate-900 border border-emerald-500/40 flex items-center justify-between gap-4">
+            <div class="p-5 rounded-3xl bg-gradient-to-r from-emerald-950/40 to-slate-900 border border-emerald-500/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">Info & Konsultasi Call for Poster:</span>
                 <h4 class="text-sm font-bold text-white mt-0.5">dr. Danny Radja, SpKKLP, B.Math</h4>
-                <p class="text-xs text-emerald-300 font-mono mt-0.5">{waContact}</p>
+                <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5 mt-1 text-xs">
+                  <span class="text-emerald-300 font-mono">{waContact}</span>
+                  <span class="text-slate-500">•</span>
+                  <!--email_off--><a href={mailtoLink} class="text-sky-400 hover:text-sky-300 font-mono underline">Email: nanny.djaja@atmajaya.ac.id</a><!--/email_off-->
+                </div>
               </div>
 
               <a 
                 href={waLink} 
                 target="_blank" 
                 rel="noopener"
-                class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold shrink-0 shadow-md transition"
+                class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold shrink-0 shadow-md transition whitespace-nowrap"
               >
                 Chat WA &rarr;
               </a>
@@ -599,12 +603,12 @@ const waLink = "https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20s
 
           <div class="px-6 py-4 bg-slate-900 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
             <span>Pastikan dokumen disimpan dalam format <strong>.docx</strong> atau <strong>.doc</strong> sebelum dikirimkan.</span>
-            <a 
+            <!--email_off--><a 
               href={mailtoLink}
               class="text-sky-400 hover:text-sky-300 font-bold underline"
             >
-              Kirim ke <!--email_off-->nanny.djaja@atmajaya.ac.id<!--/email_off--> &rarr;
-            </a>
+              Kirim ke nanny.djaja@atmajaya.ac.id &rarr;
+            </a><!--/email_off-->
           </div>
         </div>
 
@@ -637,8 +641,10 @@ const waLink = "https://wa.me/6282111013865?text=Halo%20dr.%20Danny%20Radja,%20s
       </div>
       <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
         <p>&copy; 2026 Panitia CCPG 2026. Badiklat FKIK Atma Jaya. Akreditasi B Kemenkes RI No: HK.02.02/F/3956/2024.</p>
-        <div class="flex items-center gap-4">
+        <div class="flex flex-wrap items-center gap-4">
           <span>Hotline: 0851-9060-5900</span>
+          <span>•</span>
+          <!--email_off--><a href="mailto:nanny.djaja@atmajaya.ac.id" class="text-slate-400 hover:text-white transition underline">Email: nanny.djaja@atmajaya.ac.id</a><!--/email_off-->
         </div>
       </div>
     </div>
